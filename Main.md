@@ -1,4 +1,6 @@
 # IS355
-## Task 1 
+## Tutorial Tasks 
+![Tutorial1]
+
 ![Processor Info](IM/TrueProc.png)
 ![Memory Info](IM/memory.png)

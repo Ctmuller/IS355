@@ -1,4 +1,4 @@
 # IS355
 ## Task 1 
-![Proccessor](Images/TrueProc.png)
+![Processor Info](IM/TrueProc.png)
 ![Memory](../images/processor.png)

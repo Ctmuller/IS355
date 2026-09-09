@@ -1,3 +1,3 @@
 # IS355
 ## Task 1 
-![Proccessor](Screenshot 2026-09-09 at 3.25.09 PM 4.png)
+![Proccessor](Images/Screenshot%202026-09-09%20at%203.25.09%20PM%204.png)

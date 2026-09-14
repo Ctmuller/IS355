@@ -1,5 +1,5 @@
 # Tutorial 2: 
 ## Task 1:Speed Test 
 ![Speed Test Info](IM/SpeedTest.png)
-## Task 2:Computer Memory
-![Memory Info](IM/.png)
+## Task 2: Please check the following web links
+![Memory Info](IM/Hurricane Electric.png)

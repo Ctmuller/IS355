@@ -9,4 +9,4 @@ The Hurricane Electric global network map visualizes the vast scale of internati
 ![Hurricane Electric](IM/HurricaneElectric.png)
 
 
-![AARnet International Network](IM/AARNetInternationalNetwork.png)
+![AARnet International Network](IM/AARNet International Network.png)

@@ -5,7 +5,7 @@ The speed test results demonstrate a high-performance fiber connection deliverin
 ![Speed Test Info](IM/SpeedTest.png)
 ## Task 2: Please check the following web links IP address
 
-![Submarine Cable Map](IM/SUBCable)
+![Submarine Cable Map](IM/SUBCable.png)
 
 
 ### Hurricane Electric Network Map Analysis

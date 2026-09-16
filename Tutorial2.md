@@ -7,6 +7,6 @@ The speed test results demonstrate a high-performance fiber connection deliverin
 ### Hurricane Electric Network Map Analysis
 The Hurricane Electric global network map visualizes the vast scale of international internet infrastructure, highlighting major data centers, backbone circuits, and submarine cables connecting global regions. It demonstrates how high-speed local connections, like a university network, route data across complex international topologies to reach distant destinations efficiently.
 ![Hurricane Electric](IM/HurricaneElectric.png)
-
-
+### AARNet International Network Analysis
+The AARNet international network map illustrates high-capacity global and regional subsea and terrestrial connectivity, specifically highlighting Australia's research and education network links. It emphasizes how regional academic infrastructures integrate into the broader worldwide internet topology to facilitate high-speed international data transfer.
 ![AARnet International Network](IM/AARNetInternationalNetwork.png)

@@ -101,4 +101,5 @@ To discover and document all available addressing information for a selected tar
 * **Command Executed:**
   ```powershell
   Resolve-DnsName [www.northropgrumman.com](https://www.northropgrumman.com)
+  
   ![NGResolve](IM/Resolve-DnsName-NG.png)

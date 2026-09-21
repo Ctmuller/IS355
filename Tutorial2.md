@@ -78,9 +78,9 @@ To determine the local router's IP address and evaluate local network delay and 
 * **`Test-Connection 172.16.144.1`**: Sent ICMP Echo Request packets to the default gateway to measure latency across local network infrastructure.
 
 #### Latency Results & Delays
-* **Minimum Delay:** `1 ms`
-* **Maximum Delay:** `1 ms`
-* **Average Delay:** `1 ms`
+* **Minimum Delay:** 0 ms
+* **Maximum Delay:** 1 ms
+* **Average Delay:** < 1 ms
 
 #### Discussion & Delay Analysis
 * **How Delays Were Found:** The local default gateway IP was retrieved using `Get-NetIPConfiguration`. Executing `Test-Connection 172.16.144.1` returned response times in milliseconds (`Latency (ms)`) for each ICMP echo packet sent across the local network segment.

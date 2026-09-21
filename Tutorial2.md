@@ -38,9 +38,15 @@ To inspect local IPv4/IPv6 network adapter configurations, default gateway route
 
 ![Get-NetIPConfiguration](IM/Get-NetIPConfiguration.png)
 
-## Task 5: Task 5. Test for connectivity between two devices on the Internet
-Test-NetConnection X.X.X.X
-![Test-NetConnection](IM/Test-NetConnection.png)
-Test-NetConnection X.X.X.X -count 10
-![Test-NetConnection-Count](IM/Test-NetConnection-Count.png)
+## Task 5: Test for Connectivity Between Two Devices on the Internet
+
+### Network Connectivity Testing via PowerShell
+
+To test end-to-end layer 3 reachability, latency, and round-trip time (RTT) between local and remote network devices, the following commands were executed:
+
+* **`Test-Connection <IP_Address>`**: Sends Internet Control Message Protocol (ICMP) Echo Request packets to a target IP address (such as the default gateway `172.16.144.1`) to verify active network connectivity and measure response times in milliseconds.
+* **`Test-Connection <IP_Address> -Count 10`**: Performs an extended ICMP reachability test sending 10 consecutive packets to measure packet loss, stability, and round-trip latency over a larger sample size.
+
+![Test-Connection](IM/Test-Connection.png)
+![Test-Connection-Count](IM/Test-Connection-Count.png)
 

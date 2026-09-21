@@ -14,7 +14,16 @@ To explore global internet routing, subsea cabling, and backbone transit topolog
 *   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence            (PoPs), and data centers.
 
 ## Task 3: View a MAC Address with PowerShell
-Get-NetAdapter and Get-NetAdapter -Physical
+
+### MAC Address Analysis via PowerShell
+
+A **Media Access Control (MAC) address** is a unique, 48-bit physical hardware identifier assigned to a network interface card (NIC) at the factory. Operating at Layer 2 (Data Link) of the OSI model, MAC addresses facilitate frame delivery across local network segments.
+
+To inspect local network adapters and identify physical hardware addresses, the following PowerShell cmdlets were executed:
+
+* **`Get-NetAdapter`**: Retrieves a comprehensive list of all network adapters present on the system, including both physical hardware (Ethernet, Wi-Fi) and virtual interfaces (VPNs, virtual switches, hypervisor adapters). Key fields displayed include adapter `Name`, `InterfaceDescription`, operational `Status`, `MacAddress`, and `LinkSpeed`.
+* **`Get-NetAdapter -Physical`**: Filters the output to display **only physical network hardware**, excluding virtual network interfaces, loopback adapters, and software tunnels to isolate the computer's actual physical MAC addresses.
+
 ![Get-NetAdapter](IM/Get-NetAdapter.png)
 
 ## Task 4: Use PowerShell to view and record the addresses of your own computer and local router information 

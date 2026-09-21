@@ -11,4 +11,9 @@ To explore global internet routing, subsea cabling, and backbone transit topolog
 *   **Submarine Cable Map:** Explores active and planned underwater fiber-optic cables and landing stations connecting global continents.
 *   **APNIC Resource Explorer:** A regional registry tool used to inspect IP address blocks, routing registries, and ASN details.
 *   **AARNet International Network:** Maps high-capacity international and terrestrial links supporting education and research networks.
-*   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence (PoPs), and data centers.
+*   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence            (PoPs), and data centers.
+
+## Task 2: View a MAC Address with PowerShell
+Get-NetAdapter
+![Get-NetAdapter](IM/Get-NetAdapter.png)
+Get-NetAdapter -Physical

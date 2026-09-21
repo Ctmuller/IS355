@@ -112,7 +112,7 @@ To discover and document all available addressing information for a selected tar
   * None returned in query output.
 
 ---
-![NG(IM/Resolve-DnsName.png)
+![ResolveDNS-NG](IM/Resolve-DnsName-NG.png)
 
 #### Discussion & Missing Address Analysis
 

@@ -23,6 +23,7 @@ Get-NetIPConfiguration and Get-NetIPAddress -InterfaceIndex XX
 
 ## Task 5: Task 5. Test for connectivity between two devices on the Internet
 Test-NetConnection X.X.X.X
-Test-NetConnection X.X.X.X -count 10
 ![Test-NetConnection](IM/Test-NetConnection.png)
+Test-NetConnection X.X.X.X -count 10
+![Test-NetConnection-Count](IM/Test-NetConnection-Count.png)
 

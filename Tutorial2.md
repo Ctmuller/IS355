@@ -92,3 +92,13 @@ To determine the local router's IP address and evaluate local network delay and 
 
 ![Ping Local Router](IM/Ping-Local-Router.png)
 
+## Task 8: Find Addresses for a Website
+
+### Comprehensive Web Address Discovery via PowerShell
+
+To discover and document all available addressing information for a selected target website, the official domain **`www.northropgrumman.com`** was analyzed using DNS lookup cmdlets in PowerShell.
+
+* **Command Executed:**
+  ```powershell
+  Resolve-DnsName [www.northropgrumman.com](https://www.northropgrumman.com)
+  ![NGResolve](IM/Resolve-DnsName-NG.png)

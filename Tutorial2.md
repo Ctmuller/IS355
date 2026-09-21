@@ -20,3 +20,9 @@ Get-NetAdapter and Get-NetAdapter -Physical
 ## Task 4: Use PowerShell to view and record the addresses of your own computer and local router information 
 Get-NetIPConfiguration and Get-NetIPAddress -InterfaceIndex XX
 ![Get-NetAdapter](IM/Get-NetIPConfiguration.png)
+
+## Task 5: Task 5. Test for connectivity between two devices on the Internet
+Test-NetConnection X.X.X.X
+Test-NetConnection X.X.X.X -count 10
+![Test-NetConnection](IM/Test-NetConnection.png)
+

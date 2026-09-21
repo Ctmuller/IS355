@@ -13,7 +13,10 @@ To explore global internet routing, subsea cabling, and backbone transit topolog
 *   **AARNet International Network:** Maps high-capacity international and terrestrial links supporting education and research networks.
 *   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence            (PoPs), and data centers.
 
-## Task 2: View a MAC Address with PowerShell
-Get-NetAdapter
+## Task 3: View a MAC Address with PowerShell
+Get-NetAdapter and Get-NetAdapter -Physical
 ![Get-NetAdapter](IM/Get-NetAdapter.png)
-Get-NetAdapter -Physical
+
+## Task 4: Use PowerShell to view and record the addresses of your own computer and local router information 
+Get-NetIPConfiguration and Get-NetIPAddress -InterfaceIndex XX
+![Get-NetAdapter](IM/Get-NetIPConfiguration.png)

@@ -50,5 +50,21 @@ To test end-to-end layer 3 reachability, latency, and round-trip time (RTT) betw
 ![Test-Connection](IM/Test-NetConnection.png)
 ![Test-Connection-Count](IM/Test-Connection-Count.png)
 
+## Task 6: View DNS to IP Mappings in PowerShell
 
+### Domain Name System (DNS) Resolution Analysis via PowerShell
+
+To resolve human-readable domain names into network-routable IP addresses (A and AAAA records) and inspect DNS server response data, the following PowerShell cmdlet was executed:
+
+* **`Resolve-DnsName google.com.au`**: Queries the configured local DNS server to resolve the domain `google.com.au`. It retrieves essential DNS resource records, including standard IPv4 addresses (`A` records), IPv6 addresses (`AAAA` records), TTL (Time To Live) cache values, and the query status to confirm successful domain name resolution.
+
+![Resolve-DnsName](IM/## Task 6: View DNS to IP Mappings in PowerShell
+
+### Domain Name System (DNS) Resolution Analysis via PowerShell
+
+To resolve human-readable domain names into network-routable IP addresses (A and AAAA records) and inspect DNS server response data, the following PowerShell cmdlet was executed:
+
+* **`Resolve-DnsName google.com.au`**: Queries the configured local DNS server to resolve the domain `google.com.au`. It retrieves essential DNS resource records, including standard IPv4 addresses (`A` records), IPv6 addresses (`AAAA` records), TTL (Time To Live) cache values, and the query status to confirm successful domain name resolution.
+
+![Resolve-DnsName](IM/Resolve-DnsName.png)
 

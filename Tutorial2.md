@@ -26,9 +26,17 @@ To inspect local network adapters and identify physical hardware addresses, the 
 
 ![Get-NetAdapter](IM/Get-NetAdapter.png)
 
-## Task 4: Use PowerShell to view and record the addresses of your own computer and local router information 
-Get-NetIPConfiguration and Get-NetIPAddress -InterfaceIndex XX
-![Get-NetAdapter](IM/Get-NetIPConfiguration.png)
+
+## Task 4: View Local IP and Network Configuration with PowerShell
+
+### Network Address Analysis via PowerShell
+
+To inspect local IPv4/IPv6 network adapter configurations, default gateway routes, and interface properties, the following PowerShell cmdlets were executed:
+
+* **`Get-NetIPConfiguration`**: Provides a consolidated overview of active network interfaces. Displays essential connectivity details including local IP addresses (`IPv4Address`), default gateway routes (`IPv4DefaultGateway`), and configured DNS servers.
+* **`Get-NetIPAddress -InterfaceIndex XX`**: Queries address configuration details for a specific interface identified by its numerical index (`ifIndex`). Returns detailed IP properties, subnets, prefix lengths, and address origins for that interface.
+
+![Get-NetIPConfiguration](IM/Get-NetIPConfiguration.png)
 
 ## Task 5: Task 5. Test for connectivity between two devices on the Internet
 Test-NetConnection X.X.X.X

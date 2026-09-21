@@ -47,6 +47,6 @@ To test end-to-end layer 3 reachability, latency, and round-trip time (RTT) betw
 * **`Test-Connection <IP_Address>`**: Sends Internet Control Message Protocol (ICMP) Echo Request packets to a target IP address (such as the default gateway `172.16.144.1`) to verify active network connectivity and measure response times in milliseconds.
 * **`Test-Connection <IP_Address> -Count 10`**: Performs an extended ICMP reachability test sending 10 consecutive packets to measure packet loss, stability, and round-trip latency over a larger sample size.
 
-![Test-Connection](IM/Test-Connection.png)
+![Test-Connection](IM/Test-NetConnection.png)
 ![Test-Connection-Count](IM/Test-Connection-Count.png)
 

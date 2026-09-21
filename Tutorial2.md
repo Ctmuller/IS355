@@ -75,25 +75,13 @@ To resolve human-readable domain names into network-routable IP addresses (A and
 
 ### Default Gateway Discovery and Latency Analysis via PowerShell
 
-To determine the local router's IP address and evaluate local network delay and round-trip time (RTT), the following commands were executed:
+To evaluate local network response time and packet loss to the default gateway (`172.16.144.1`), the `ping` command was executed:
 
-* **`Get-NetIPConfiguration`**: Identified the local default gateway address (`172.16.144.1`) assigned to the active network interface.
-* **`Test-Connection 172.16.144.1`**: Sent ICMP Echo Request packets to the default gateway to measure latency across local network infrastructure.
-
-#### Latency Results & Delays
-* **Minimum Delay:** 0 ms
-* **Maximum Delay:** 1 ms
-* **Average Delay:** < 1 ms
-
-#### Discussion & Delay Analysis
-* **How Delays Were Found:** The local default gateway IP was retrieved using `Get-NetIPConfiguration`. Executing `Test-Connection 172.16.144.1` returned response times in milliseconds (`Latency (ms)`) for each ICMP echo packet sent across the local network segment.
-* **Factors Impacting Delay:** 
-  * **Medium Type:** Wired Ethernet connections yield consistently low latency (< 1 ms to 1 ms) compared to Wi-Fi, which is subject to signal attenuation, physical obstacles, and radio frequency interference (RFI).
-  * **Network Congestion:** Heavy local network traffic, background downloads, or high packet volume on the router can increase processing queues, causing brief spikes in delay (jitter).
-  * **Router Hardware & Load:** High CPU or memory utilization on the default gateway can slow down its ability to respond to ICMP ping requests promptly.
-  * **Temporal Variance:** Delays fluctuate over time as concurrent device activity on the local network changes, leading to variable queuing delays at the physical and data link layers.
-
-![Ping Local Router](IM/Ping-Local-Router.png)
+* **Command Executed:**
+  ```powershell
+  ping 172.16.144.1
+ 
+![Ping Local Router](IM/ping.png)
 
 ## Task 8: Find Addresses for a Website
 

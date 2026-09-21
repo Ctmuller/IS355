@@ -19,5 +19,3 @@ The command `Get-ComputerInfo -Property "*memory*"` filters the output to proper
   - - **OsTotalVirtualMemorySize / OsFreeVirtualMemory / OsInUseVirtualMemory** – virtual memory (RAM + page file): total, free, and in use
     - - **OsMaxProcessMemorySize** – maximum memory a single process can address (128 GB, reflecting a 64-bit system)
       - [Processor Info](IM/TrueProc.png)
-# Task 2:Computer Memory
-![Memory Info](IM/memory.png)

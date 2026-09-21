@@ -101,3 +101,28 @@ To discover and document all available addressing information for a selected tar
 * **Command Executed:**
   ```powershell
   Resolve-DnsName www.northropgrumman.com
+ #### Address Records Retrieved
+
+* **Domain Name (FQDN):** `www.northropgrumman.com`
+* **Canonical Name (CNAME):** `cname.vercel-dns.com` (indicates DNS routing and hosting through Vercel's edge network)
+* **IPv4 Addresses (A Records):**
+  * `66.33.60.67`
+  * `76.76.219.98`
+* **IPv6 Addresses (AAAA Records):**
+  * None returned in query output.
+
+---
+![NG(IM/Resolve-DnsName.png)
+
+#### Discussion & Missing Address Analysis
+
+* **How Addresses Were Found:** 
+  The addressing information was obtained by executing `Resolve-DnsName www.northropgrumman.com` in PowerShell. The cmdlet queried the local DNS server to resolve the domain into its associated CNAME record and public IPv4 addresses.
+
+* **MAC (Physical) Address:** 
+  * **Status:** Unavailable / Not Found.
+  * **Explanation:** A MAC address operates strictly at Layer 2 (Data Link layer) of the OSI model and is only used to route frames within a local network segment (LAN). Once network traffic traverses a Layer 3 router onto the public Internet, the local MAC address header is stripped and replaced at each routing hop. Because `www.northropgrumman.com` is hosted on remote web servers, its physical MAC address is not accessible or exposed to end users.
+
+* **Internal / Private IP Address:** 
+  * **Status:** Unavailable / Not Found.
+  * **Explanation:** Enterprise web applications sit behind reverse proxies and Content Delivery Networks (Vercel). The IP addresses returned (`66.33.60.67`, `76.76.219.98`) belong to public edge proxy servers. The origin server's private IP address is concealed behind Network Address Translation (NAT) and perimeter firewalls to protect internal systems from direct cyber attacks.

@@ -3,11 +3,21 @@
 ## Task 1: View ARP Table
 
 ### Purpose of ARP Packets
-The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (such as `192.168.1.1`) into its corresponding Layer 2 physical MAC address (such as `00-1A-2B-3C-4D-5E`). Since local Ethernet communication relies on MAC addresses to frame and deliver data across a local area network (LAN), ARP allows a host to discover where to direct frames when it only knows a target's IP address.
+The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (such as `172.16.148.1`) into its corresponding Layer 2 physical MAC address (such as `0E-01-37-06-17-05`). Since local Ethernet communication relies on MAC addresses to frame and deliver data across a local area network (LAN), ARP allows a host to discover where to direct frames when it only knows a target's IP address.
 
 ### ARP Table Capture
-Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbor` / `arp -a`):
+Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbor`):
 
+![ARP Table](screenshot-arp-table.png)
+
+### Reachable Devices
+* **Device 1 MAC Address:** `0E-01-37-06-17-05`
+  * **Device Identity:** Default Gateway / Virtual Network Interface (`172.16.148.1`)
+  * **Explanation:** This MAC address belongs to the primary local network gateway. It is listed as "Reachable" because active ICMP/IP traffic was recently exchanged with this address on the subnet.
+
+* **Device 2 MAC Address:** `[Insert MAC address of second reachable device]`
+  * **Device Identity:** `[Insert IP address of second device]`
+  * **Explanation:** This MAC address belongs to another host on the local network. Sending traffic to its IP address triggered an ARP request and populated the table with its physical address in a "Reachable" state.
 ![ARP Table](screenshot-arp-table.png)
 
 ### Reachable Devices

@@ -30,3 +30,18 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
 * **Image File:** ![Switched LAN - Star Topology](IM/star-topology-network.png)
 * **Editable File:** ![Switched LAN - Star Topology](IM/star-topology-network.drawio)
 
+## Task 4: Learning Reflection
+
+### Tools and Commands Learned (Weeks 1–3)
+* **PowerShell Network Cmdlets:** `Get-NetAdapter`, `Get-NetIPAddress`, `Get-NetNeighbor`
+* **Command Line Network Utilities:** `ping`, `tracert`, `arp`, `ipconfig`
+* **Network Diagramming Software:** [draw.io (diagrams.net)](https://app.diagrams.net/)
+* **Version Control & Documentation:** Git and GitHub (Markdown editing)
+
+### Practical Application of a Selected Tool
+* **Selected Tool:** `ping` & PowerShell Network Cmdlets (`Get-NetNeighbor`, `Get-NetIPAddress`)
+* **Practical Utility Outside IS355:**  
+  Understanding basic command-line network diagnostic tools like `ping` and `Get-NetNeighbor` is extremely practical for managing home network infrastructure and troubleshooting connectivity issues in other IT/data systems coursework. 
+
+  For example, if a home smart device, network printer, or local server becomes unresponsive, running a quick `ping` command immediately isolates whether the issue is a basic Layer 2/3 physical connection failure on the local subnet or a higher-layer application/software glitch. Furthermore, checking the local ARP table via `Get-NetNeighbor` allows you to confirm that your workstation has discovered the device's hardware (MAC) address without having to log into a router administrator interface.
+

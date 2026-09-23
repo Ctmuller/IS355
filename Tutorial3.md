@@ -23,11 +23,8 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
   ## Task 2: Draw Network Diagrams
 
 ### Diagram A: Single Switch LAN (4 PCs)
-* **Image File:** `single-switch-network.png`
-* **Editable File:** `single-switch-network.drawio`
-
-
-![Switched LAN - Single Switch](IM/single-switch-network.png)
+* **Image File:** ![Switched LAN - Single Switch](IM/single-switch-network.png)
+* **Editable File:** ![Switched LAN - Single Switch](IM/single-switch-network.drawio) 
 
 ### Diagram B: Star Topology LAN (3 Switches, 8 PCs)
 * **Image File:** `star-topology-network.png`

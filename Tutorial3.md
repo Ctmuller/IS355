@@ -8,7 +8,7 @@ The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (suc
 ### ARP Table Capture
 Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbor`):
 
-![ARP Table](screenshot-arp-table.png)
+![ARP Table](arp-table.png)
 
 ### Reachable Devices
 * **Device 1 MAC Address:** `0E-01-37-06-17-05`

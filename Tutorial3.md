@@ -21,17 +21,41 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
   * 
 ## Task 2: Draw Network Diagrams
 
-### Diagram A: Single Switch LAN (4 PCs)
-* **Image File:** `single-switch-network.png`
-* **Editable File:** `single-switch-network.drawio`
+%%{init: {'theme':'base', 'themeVariables': {'primaryTextColor':'#333', 'lineColor':'#ccc'}, 'securityLevel':'loose'}}%%
+graph TD
+    %% Define Styles
+    classDef pc fill:#f9f,stroke:#333,stroke-width:2px,rx:10,ry:10;
+    classDef switch fill:#ff9,stroke:#333,stroke-width:2px;
+    classDef title fill:none,stroke:none;
 
-![Switched LAN - Single Switch](single-switch-network.png)
+    %% Add Name and Date - Top Left
+    Name[Colin Muller]:::title
+    Date[October 26, 2023]:::title
+    Title[Diagram A: Switched LAN with 1 Switch, 4 PCs]:::title
 
-### Diagram B: Star Topology LAN (3 Switches, 8 PCs)
-* **Image File:** `star-topology-network.png`
-* **Editable File:** `star-topology-network.drawio`
+    %% Core Components
+    subgraph LAN_A ["A: Single Switch LAN"]
+        direction LR
+        Switch[SW-01]:::switch
+        PC01[PC-01]:::pc
+        PC02[PC-02]:::pc
+        PC03[PC-03]:::pc
+        PC04[PC-04]:::pc
 
-![Switched LAN - Star Topology](star-topology-network.png)
+        %% Connections
+        Switch -->|F0/1| PC01
+        Switch -->|F0/2| PC02
+        Switch -->|F0/3| PC03
+        Switch -->|F0/4| PC04
+    end
+
+    %% Hide original name/date on chart
+    linkStyle 0,1,2 stroke-width:0px;
+    
+    %% Add Name, Date, Title into the actual chart structure for export
+    LAN_A ~~~ Name
+    Name ~~~ Date
+    Date ~~~ Title
 
 ---
 

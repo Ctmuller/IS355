@@ -1,7 +1,7 @@
 # IS355
 
-## Tutorial Tasks
+## Course Modules
 
-* [Tutorial 1](./Tutorial1.md)
-* [Tutorial 2](./Tutorial2.md)
-* [Tutorial 3](./Tutorial3.md)
+* [M1: Computer Systems & Applications](./Tutorial1.md)
+* [M2: Computer Networks](./Tutorial2.md)
+* [M3: Network Technologies](./Tutorial3.md)

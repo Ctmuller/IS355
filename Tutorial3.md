@@ -17,10 +17,8 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
 
 * **Device 2 MAC Address:** `0E-01-37-06-17-05`
   * **Device Identity:** Virtual Subnet Metadata / Service Endpoint (`169.254.169.254`)
-  * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.)
-
-
-
+  * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.
+  * 
 ## Task 2: Draw Network Diagrams
 
 ### Diagram A: Single Switch LAN (4 PCs)

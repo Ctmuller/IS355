@@ -27,14 +27,6 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
   * **Device Identity:** Virtual Subnet Metadata / Service Endpoint (`169.254.169.254`)
   * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.)
 
-### Reachable Devices
-* **Device 1 MAC Address:** `0E-01-37-06-17-05`
-  * **Device Identity:** Default Gateway (`172.16.148.1`)
-  * **Explanation:** This MAC address belongs to the primary local network gateway. It is listed as "Reachable" because active ICMP/IP traffic was recently exchanged with this address on the local subnet.
-
-* **Device 2 MAC Address:** `0E-01-37-06-17-05`
-  * **Device Identity:** Virtual Subnet Metadata / Service Endpoint (`169.254.169.254`)
-  * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.
 
 
 ## Task 2: Draw Network Diagrams

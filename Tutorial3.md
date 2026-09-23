@@ -18,58 +18,19 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
 * **Device 2 MAC Address:** `0E-01-37-06-17-05`
   * **Device Identity:** Virtual Subnet Metadata / Service Endpoint (`169.254.169.254`)
   * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.
-  * 
-## Task 2: Draw Network Diagrams
 
-%%{init: {'theme':'base', 'themeVariables': {'primaryTextColor':'#333', 'lineColor':'#ccc'}, 'securityLevel':'loose'}}%%
-graph TD
-    %% Define Styles
-    classDef pc fill:#f9f,stroke:#333,stroke-width:2px,rx:10,ry:10;
-    classDef switch fill:#ff9,stroke:#333,stroke-width:2px;
-    classDef title fill:none,stroke:none;
 
-    %% Add Name and Date - Top Left
-    Name[Colin Muller]:::title
-    Date[October 26, 2023]:::title
-    Title[Diagram A: Switched LAN with 1 Switch, 4 PCs]:::title
+  ## Task 2: Draw Network Diagrams
 
-    %% Core Components
-    subgraph LAN_A ["A: Single Switch LAN"]
-        direction LR
-        Switch[SW-01]:::switch
-        PC01[PC-01]:::pc
-        PC02[PC-02]:::pc
-        PC03[PC-03]:::pc
-        PC04[PC-04]:::pc
+### Diagram A: Single Switch LAN (4 PCs)
+* **Image File:** `single-switch-network.png`
+* **Editable File:** `single-switch-network.drawio`
 
-        %% Connections
-        Switch -->|F0/1| PC01
-        Switch -->|F0/2| PC02
-        Switch -->|F0/3| PC03
-        Switch -->|F0/4| PC04
-    end
 
-    %% Hide original name/date on chart
-    linkStyle 0,1,2 stroke-width:0px;
-    
-    %% Add Name, Date, Title into the actual chart structure for export
-    LAN_A ~~~ Name
-    Name ~~~ Date
-    Date ~~~ Title
+![Switched LAN - Single Switch](single-switch-network.png)
 
----
+### Diagram B: Star Topology LAN (3 Switches, 8 PCs)
+* **Image File:** `star-topology-network.png`
+* **Editable File:** `star-topology-network.drawio`
 
-## Task 4: Learning Reflection
-
-### Tools & Commands Used (Weeks 1–3)
-1. **PowerShell Cmdlets:** `Get-NetAdapter`, `Get-NetIPAddress`, `Get-NetNeighbor`
-2. **Command Line Utilities:** `ping`, `tracert`, `arp`
-3. **Diagramming Software:** diagrams.net (`app.diagrams.net`)
-4. **Version Control:** Git & GitHub
-
-### Practical Tool Application Outside IS355
-* **Selected Tool:** `ping` / PowerShell Network Cmdlets (`Get-NetIPAddress`, `Get-NetNeighbor`)
-* **Practical Application & Utility:**  
-  Understanding basic network diagnostic tools like `ping` and IP listing commands is extremely practical for managing a home network and troubleshooting connectivity issues across other IT and enterprise software coursework. 
-  
-  For example, if a home smart device, printer, or local server goes offline, running `ping` allows you to immediately isolate whether the issue is a physical connectivity failure on the LAN or a higher-layer application fault. Additionally, inspecting the local ARP table (`Get-NetNeighbor`) allows you to verify whether your computer is physically communicating with a router or local target without needing to log into the router's web interface.
+![Switched LAN - Star Topology](star-topology-network.png)

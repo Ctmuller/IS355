@@ -2,6 +2,8 @@
 
 ## Task 1: View ARP Table
 
+## Task 1: View ARP Table
+
 ### Purpose of ARP Packets
 The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (such as `172.16.148.1`) into its corresponding Layer 2 physical MAC address (such as `0E-01-37-06-17-05`). Since local Ethernet communication relies on MAC addresses to frame and deliver data across a local area network (LAN), ARP allows a host to discover where to direct frames when it only knows a target's IP address.
 
@@ -18,17 +20,8 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
 * **Device 2 MAC Address:** `[Insert MAC address of second reachable device]`
   * **Device Identity:** `[Insert IP address of second device]`
   * **Explanation:** This MAC address belongs to another host on the local network. Sending traffic to its IP address triggered an ARP request and populated the table with its physical address in a "Reachable" state.
-![ARP Table](screenshot-arp-table.png)
 
-### Reachable Devices
-* **Device 1 MAC Address:** `AA-BB-CC-11-22-33`
-  * **Device Identity:** Lab Computer / Gateway Router (`192.168.1.1`)
-  * **Explanation:** This MAC address belongs to the default gateway / neighboring lab machine. It shows as "Reachable" because recent active ICMP (ping) traffic was exchanged between my computer and this IP address on the local subnet.
-* **Device 2 MAC Address:** `DD-EE-FF-44-55-66`
-  * **Device Identity:** Neighboring Student Workstation (`192.168.1.105`)
-  * **Explanation:** This MAC address corresponds to another workstation sitting adjacent in the computer lab. Initiating a direct ping request caused my system to broadcast an ARP request, receiving their hardware address in response and marking it as "Reachable."
 
----
 
 ## Task 2: Draw Network Diagrams
 

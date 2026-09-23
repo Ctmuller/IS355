@@ -8,7 +8,7 @@ The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (suc
 ### ARP Table Capture
 Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbor`):
 
-![ARP Table](## Task 1: View ARP Table
+![ARP Table](screenshot-arp-table.png)
 
 ### Purpose of ARP Packets
 The Address Resolution Protocol (ARP) translates a known Layer 3 IP address (such as `172.16.148.1`) into its corresponding Layer 2 physical MAC address (such as `0E-01-37-06-17-05`). Since local Ethernet communication relies on MAC addresses to frame and deliver data across a local area network (LAN), ARP allows a host to discover where to direct frames when it only knows a target's IP address.

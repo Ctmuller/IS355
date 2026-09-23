@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="9nNUCmPP7qklRHNGXmaT">
+    <mxGraphModel dx="620" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;graph TD;\n    subgraph LAN_A [\&quot;Diagram A: Switched LAN (Colin Muller)\&quot;]\n        SW1[SW-01]\n        PC1[PC-01]\n        PC2[PC-02]\n        PC3[PC-03]\n        PC4[PC-04]\n\n        SW1 --- PC1\n        SW1 --- PC2\n        SW1 --- PC3\n        SW1 --- PC4\n    end&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="4JD-F_CeNji1_ib41sfx-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Diagram A: Switched LAN (Colin Muller)" mermaidId="n:LAN_A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Diagram A: Switched LAN (Colin Muller)" id="4JD-F_CeNji1_ib41sfx-2">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="431" width="404" x="30" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="SW-01" mermaidId="n:SW1" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="SW-01" id="4JD-F_CeNji1_ib41sfx-3">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="103" x="35" y="201" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PC-01" mermaidId="n:PC1" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="PC-01" id="4JD-F_CeNji1_ib41sfx-4">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="101" x="268" y="357" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PC-02" mermaidId="n:PC2" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="PC-02" id="4JD-F_CeNji1_ib41sfx-5">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="101" x="268" y="253" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PC-03" mermaidId="n:PC3" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="PC-03" id="4JD-F_CeNji1_ib41sfx-6">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="101" x="268" y="149" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PC-04" mermaidId="n:PC4" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="PC-04" id="4JD-F_CeNji1_ib41sfx-7">
+          <mxCell parent="4JD-F_CeNji1_ib41sfx-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="101" x="268" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SW1-&gt;PC1#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.7;exitY=1;entryX=0;entryY=0.5;" mermaidBaseValue="" id="4JD-F_CeNji1_ib41sfx-8">
+          <mxCell edge="1" parent="4JD-F_CeNji1_ib41sfx-2" source="4JD-F_CeNji1_ib41sfx-3" style="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.7;exitY=1;entryX=0;entryY=0.5;rounded=0;" target="4JD-F_CeNji1_ib41sfx-4">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="203" y="384" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SW1-&gt;PC2#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.93;entryX=0;entryY=0.5;" mermaidBaseValue="" id="4JD-F_CeNji1_ib41sfx-9">
+          <mxCell edge="1" parent="4JD-F_CeNji1_ib41sfx-2" source="4JD-F_CeNji1_ib41sfx-3" style="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.93;entryX=0;entryY=0.5;rounded=0;" target="4JD-F_CeNji1_ib41sfx-5">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="203" y="280" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SW1-&gt;PC3#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.07;entryX=0;entryY=0.5;" mermaidBaseValue="" id="4JD-F_CeNji1_ib41sfx-10">
+          <mxCell edge="1" parent="4JD-F_CeNji1_ib41sfx-2" source="4JD-F_CeNji1_ib41sfx-3" style="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.07;entryX=0;entryY=0.5;rounded=0;" target="4JD-F_CeNji1_ib41sfx-6">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="203" y="176" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SW1-&gt;PC4#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.7;exitY=0;entryX=0;entryY=0.5;" mermaidBaseValue="" id="4JD-F_CeNji1_ib41sfx-11">
+          <mxCell edge="1" parent="4JD-F_CeNji1_ib41sfx-2" source="4JD-F_CeNji1_ib41sfx-3" style="curved=1;startArrow=none;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.7;exitY=0;entryX=0;entryY=0.5;rounded=0;" target="4JD-F_CeNji1_ib41sfx-7">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="203" y="72" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

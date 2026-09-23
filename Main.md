@@ -1,6 +1,6 @@
 # IS355
 **Student Name:** Colin Muller  
-**Unit:** IS355 – Computer Networks  
+**Unit:** IS355  
 
 ---
 ## Course Modules

@@ -20,14 +20,16 @@ The command `Get-ComputerInfo -Property "*Processors*"` filters the output to on
 
 ## Task 2: Computer Memory
 
-![Memory Info](IM/memory.png)
+![Memory Info](memory.png)
 
-The command `Get-ComputerInfo -Property "*memory*"` filters the output to properties containing "memory", giving a breakdown of the system's RAM and virtual memory:
+The command `Get-ComputerInfo -Property "*memory*"` filters the output to properties containing "memory", providing a breakdown of the system's RAM and virtual memory:
 
-- **CsTotalPhysicalMemory / CsPhyicallyInstalledMemory** – total physical RAM installed (~32 GB)
-- - **OsTotalVisibleMemorySize / OsFreePhysicalMemory** – RAM visible to the OS and currently free (~27 GB free)
-  - - **OsTotalVirtualMemorySize / OsFreeVirtualMemory / OsInUseVirtualMemory** – virtual memory (RAM + page file): total, free, and in use
-    - - **OsMaxProcessMemorySize** – maximum memory a single process can address (128 GB, reflecting a 64-bit system)
-![Processor Info](IM/TrueProc.png)
-- *CsTotalPhysicalMemory / CsPhyicallyInstalledMemory* – total physical RAM installed (~32 GB)
-- *OsTotalVisibleMemorySize / OsFreePhysicalMemory* – RAM visible to the OS and currently free (~27 GB free)
+- **CsTotalPhysicalMemory / CsPhysicallyInstalledMemory:** Total physical RAM installed (~32 GB).
+- **OsTotalVisibleMemorySize / OsFreePhysicalMemory:** RAM visible to the operating system and currently available (~27 GB free).
+- **OsTotalVirtualMemorySize / OsFreeVirtualMemory / OsInUseVirtualMemory:** Virtual memory metrics combining physical RAM and pagefile allocation (total, free, and in-use).
+- **OsMaxProcessMemorySize:** Maximum addressable memory space for a single 64-bit user-mode process (128 TB).
+
+### Memory Breakdown & Byte Conversions
+- **Total Installed RAM (`CsTotalPhysicalMemory`):** 33,983,848,448 Bytes ≈ **31.65 GB**
+- **Free Physical Memory (`OsFreePhysicalMemory`):** 27,241,120 KB ≈ **25.98 GB** free (~82% available capacity)
+- **64-Bit Architecture Limit:** The 128 TB limit on `OsMaxProcessMemorySize` confirms the system is running a standard modern 64-bit Windows OS kernel.

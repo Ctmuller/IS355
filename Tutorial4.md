@@ -8,3 +8,6 @@ First, identify the index (`InterfaceIndex`) of the primary physical adapter:
 
 ```powershell
 Get-NetAdapter -Physical
+
+
+! [Get-NetRoute -Interfaceindex](IM/Get-NetRoute -Interfaceindex.png)

@@ -11,7 +11,6 @@ The speed test results demonstrate a high-performance fiber connection deliverin
 - **Download Speed:** 594.23 Mbps
 - **Upload Speed:** 642.79 Mbps
 - **Ping / Latency:** 9 ms
-- **ISP / Server:** [Insert ISP Name from Screenshot, e.g., Verizon / AWS]
 
 ## Task 2: Network Infrastructure and Mapping Tools
 
@@ -21,6 +20,9 @@ To explore global internet routing, subsea cabling, and backbone transit topolog
 *   **APNIC Resource Explorer:** A regional registry tool used to inspect IP address blocks, routing registries, and ASN details.
 *   **AARNet International Network:** Maps high-capacity international and terrestrial links supporting education and research networks.
 *   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence            (PoPs), and data centers.
+  ### Key Insights & Takeaways
+- **Subsea Dependency:** Transoceanic fiber cables handle over 95% of international data traffic, making physical subsea landing stations critical single-point-of-failure infrastructure.
+- **BGP & Anycast Routing:** Global networks like Hurricane Electric use Autonomous System Numbers (ASNs) and Anycast DNS to route traffic along the shortest path, optimizing latency for end users.
 
 ## Task 3: View a MAC Address with PowerShell
 
@@ -46,6 +48,10 @@ To inspect local IPv4/IPv6 network adapter configurations, default gateway route
 * **`Get-NetIPAddress -InterfaceIndex XX`**: Queries address configuration details for a specific interface identified by its numerical index (`ifIndex`). Returns detailed IP properties, subnets, prefix lengths, and address origins for that interface.
 
 ![Get-NetIPConfiguration](IM/Get-NetIPConfiguration.png)
+
+### Additional Technical Observations
+- **IPv4 Address:** `172.16.144.XX` (Class B Private IP range, routed internally via NAT).
+- **Link-Local IPv6 Address:** Begins with `fe80::`. Link-local IPv6 addresses are self-assigned and non-routable beyond the local network segment.
 
 ## Task 5: Test for Connectivity Between Two Devices on the Internet
 

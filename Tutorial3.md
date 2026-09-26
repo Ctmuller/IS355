@@ -11,13 +11,13 @@ Below is the output of the ARP table retrieved using PowerShell (`Get-NetNeighbo
 ![ARP Table](IM/arp-table.png)
 
 ### Reachable Devices
-* **Device 1 MAC Address:** `0E-01-37-06-17-05`
-  * **Device Identity:** Default Gateway (`172.16.148.1`)
-  * **Explanation:** This MAC address belongs to the primary local network gateway. It is listed as "Reachable" because active ICMP/IP traffic was recently exchanged with this address on the local subnet.
+- **Device 1 MAC Address:** `0E-01-37-06-17-05`
+  - **Device Identity:** Default Gateway (`172.16.148.1`)
+  - **Explanation:** This MAC address belongs to the primary local network gateway. It is listed in a `Reachable` state because active traffic was recently exchanged with this address.
 
-* **Device 2 MAC Address:** `0E-01-37-06-17-05`
-  * **Device Identity:** Virtual Subnet Metadata / Service Endpoint (`169.254.169.254`)
-  * **Explanation:** This MAC address maps to the virtual network service interface on the subnet. It appears in the ARP table in a "Stale" state following prior communication with the host environment.
+- **Device 2 MAC Address:** `0E-01-37-06-17-05`
+  - **Device Identity:** Link-Local / Virtual Service Endpoint (`169.254.169.254`)
+  - **Explanation:** This IP maps to a virtual endpoint on the network interface. It is currently listed in a `Stale` state because no traffic has been exchanged with it within the reachability timeout window.
 
 
   ## Task 2: Draw Network Diagrams

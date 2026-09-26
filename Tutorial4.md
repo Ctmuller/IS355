@@ -6,4 +6,5 @@
 First, identify the index of the primary physical interface using:
 ```powershell
 Get-NetAdapter -Physical
+
 ![Get-NetAdapter](IM/Get-NetAdapter.png)

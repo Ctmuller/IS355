@@ -6,7 +6,7 @@
 
 First, identify the index (`InterfaceIndex`) of the primary physical adapter:
 
-![Get-NetRoute -Interfaceindex](IM/Get-NetRoute -Interfaceindex.png)
+![Get-NetRoute -Interfaceindex](IM/GetNetRoute)
 
 | DestinationPrefix | NextHop | RouteMetric | Detailed Description |
 | :--- | :--- | :--- | :--- |

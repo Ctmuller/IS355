@@ -1,10 +1,10 @@
-# IS355: Tutorial 4 
+# IS355: Tutorial 4 - Routing, Traceroute, and IP Geolocation
 
 ## Task 1: View Routing Table
 
-### PowerShell Command Executed
-First, identify the index of the primary physical interface using:
+### PowerShell Commands Executed
+
+First, identify the index (`InterfaceIndex`) of the primary physical adapter:
+
 ```powershell
 Get-NetAdapter -Physical
-
-![Get-NetAdapter](IM/Get-NetAdapter.png)

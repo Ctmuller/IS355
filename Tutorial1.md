@@ -20,7 +20,7 @@ The command `Get-ComputerInfo -Property "*Processors*"` filters the output to on
 
 ## Task 2: Computer Memory
 
-![Memory Info](memory.png)
+![Memory Info](IM/memory.png)
 
 The command `Get-ComputerInfo -Property "*memory*"` filters the output to properties containing "memory", providing a breakdown of the system's RAM and virtual memory:
 

@@ -28,6 +28,6 @@ The command `Get-ComputerInfo -Property "*memory*"` filters the output to proper
 - - **OsTotalVisibleMemorySize / OsFreePhysicalMemory** – RAM visible to the OS and currently free (~27 GB free)
   - - **OsTotalVirtualMemorySize / OsFreeVirtualMemory / OsInUseVirtualMemory** – virtual memory (RAM + page file): total, free, and in use
     - - **OsMaxProcessMemorySize** – maximum memory a single process can address (128 GB, reflecting a 64-bit system)
-      - ![Processor Info](IM/TrueProc.png)
+![Processor Info](IM/TrueProc.png)
 - *CsTotalPhysicalMemory / CsPhyicallyInstalledMemory* – total physical RAM installed (~32 GB)
 - *OsTotalVisibleMemorySize / OsFreePhysicalMemory* – RAM visible to the OS and currently free (~27 GB free)

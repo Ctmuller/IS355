@@ -50,7 +50,7 @@ To inspect local IPv4/IPv6 network adapter configurations, default gateway route
 ![Get-NetIPConfiguration](IM/Get-NetIPConfiguration.png)
 
 ### Additional Technical Observations
-- **IPv4 Address:** `172.16.144.XX` (Class B Private IP range, routed internally via NAT).
+- **IPv4 Address:** `172.16.144.1` (Class B Private IP range, routed internally via NAT).
 - **Link-Local IPv6 Address:** Begins with `fe80::`. Link-local IPv6 addresses are self-assigned and non-routable beyond the local network segment.
 
 ## Task 5: Test for Connectivity Between Two Devices on the Internet

@@ -7,6 +7,12 @@ The speed test results demonstrate a high-performance fiber connection deliverin
 
 ![Speed Test Info](IM/SpeedTest.png)
 
+### Speed Test Summary
+- **Download Speed:** 594.23 Mbps
+- **Upload Speed:** 642.79 Mbps
+- **Ping / Latency:** 9 ms
+- **ISP / Server:** [Insert ISP Name from Screenshot, e.g., Verizon / AWS]
+
 ## Task 2: Network Infrastructure and Mapping Tools
 
 To explore global internet routing, subsea cabling, and backbone transit topologies, the following resources were checked:

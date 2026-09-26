@@ -77,7 +77,7 @@ ping 172.16.144.1
 
 ![Ping Local Router](IM/ping.png)
 
-**Results:** Minimum = [0] ms, Average = [0] ms, Maximum = [0] ms, Packet loss = [0]%.
+Results: Minimum = [0] ms, Average = [0] ms, Maximum = [0] ms, Packet loss = [0]%.
 
 **Discussion:** The round-trip delay to a local default gateway is normally very low (sub-millisecond to a few ms) since traffic never leaves the LAN. Factors that can affect the delay include network congestion (other devices on the same Wi-Fi/switch competing for bandwidth), the connection medium (Wi-Fi introduces more variability than a wired Ethernet link due to signal interference and retransmissions), CPU/interrupt load on the router itself, and background traffic. Delay can vary over time because Wi-Fi channel conditions change (interference from neighboring networks, physical obstructions, distance from the access point), and because router CPU load fluctuates as more devices connect or as it processes more traffic (e.g., during peak household usage hours).
 

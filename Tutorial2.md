@@ -1,4 +1,16 @@
-# Tutorial 2: 
+# IS355: Tutorial 2 - Network Performance, Tools, and IP Addressing
+
+## Table of Contents
+- [Task 1: Speed Test](#task-1-speed-test)
+- [Task 2: Network Infrastructure and Mapping Tools](#task-2-network-infrastructure-and-mapping-tools)
+- [Task 3: View a MAC Address with PowerShell](#task-3-view-a-mac-address-with-powershell)
+- [Task 4: View Local IP and Network Configuration with PowerShell](#task-4-view-local-ip-and-network-configuration-with-powershell)
+- [Task 5: Test for Connectivity Between Two Devices on the Internet](#task-5-test-for-connectivity-between-two-devices-on-the-internet)
+- [Task 6: View DNS to IP Mappings in PowerShell](#task-6-view-dns-to-ip-mappings-in-powershell)
+- [Task 7: Ping Your Local Router](#task-7-ping-your-local-router)
+- [Task 8: Find Addresses for a Website](#task-8-find-addresses-for-a-website)
+
+---
 ## Task 1: Speed Test
 
 ### Speed Test Analysis

@@ -69,9 +69,12 @@ To analyze internet routing pathways, hop counts, and round-trip delays, three t
 ## Task 3: IP Address Lookup & Geolocation
 
 ### Online IP Geolocation Test
-* **Service Used:** [WhatIsMyIPAddress](https://whatismyipaddress.com/)
-* **Detected Information:** Discovered public IPv4 address, host ISP (AWS / Cloud Infrastructure), and regional area (Baltimore / Washington D.C. area).
-* **Accuracy:** Accurately identified the service provider and metropolitan area, but did not pinpoint an exact physical address or individual endpoint device.
+* **Service Used:** [WhatIsMyIPAddress](https://whatismyipaddress.com/zh-tw/index2)
+* **Detected IPv4 Address:** `73.200.51.180`
+* **Detected Information:**
+  * **ISP:** Comcast Cable Communications LLC
+  * **Location Identified:** Washington, District of Columbia, United States
+* **Accuracy Assessment:** The lookup accurately identified the major Internet Service Provider (Comcast) and the general metropolitan region (Washington D.C. area). However, it did not pinpoint an exact street address or specific home router/device endpoint.
 
 ![IP Lookup Results](IM/ip-lookup.png)
 
@@ -79,14 +82,18 @@ To analyze internet routing pathways, hop counts, and round-trip delays, three t
 
 ### Multi-Network Comparison
 
-| Connection Type | Public IP Detected | Location Identified | Accuracy Assessment |
+| Connection Type | Detected Public IP | Location / ISP Identified | Accuracy & Scope |
 | :--- | :--- | :--- | :--- |
-| **Virtual Desktop / Campus Network** | `XX.XX.XX.XX` | Datacenter / Regional Gateway | Identifies the institutional/cloud datacenter egress point rather than personal location. |
-| **Home / Mobile Network** | `YY.YY.YY.YY` | Metro ISP Point of Presence | Identifies the ISP exchange point within a 10–20 mile radius, not the exact residence. |
+| **Virtual Desktop / Campus Network** | `172.16.146.211` *(Internal)* / Campus Egress IP | Apporto / AWS Cloud Datacenter | Resolves to the institutional/cloud datacenter exit node rather than personal physical location. |
+| **Home / Residential Network** | `73.200.51.180` | Washington, D.C. (Comcast Cable) | Identifies the ISP's regional Point of Presence (POP) within a 10–20 mile radius, not the exact residence. |
 
 ---
 
 ### Geolocation Database Exploration
-* **Dataset Used:** Downloaded `ip-to-country-lite` CSV database from DB-IP.
-* **Database Insights:** Maps blocks of IP address ranges (assigned by ARIN/RIPE to ASNs) to ISO country codes and regional designations.
-* **Why Pinpoint Precision Fails:** Public IP addresses are assigned to network infrastructure and organizations rather than fixed physical devices. Carrier-Grade NAT (CGNAT), dynamic IP allocation, and VPNs conceal the physical location of the end user.
+
+* **Dataset Downloaded:** `ip-to-country-lite` CSV database from [DB-IP](https://db-ip.com/db/download/ip-to-country-lite).
+* **Database Structure & Insights:** IP geolocation databases store mapped blocks of IPv4/IPv6 ranges (assigned by Regional Internet Registries like ARIN or RIPE to Autonomous System Numbers) linked to ISO country codes, states, and city regions.
+* **Why Pinpoint Precision Is Not Possible:**
+  1. **Infrastructure Assignment:** Public IP addresses are allocated to service providers and network operators, not tied to fixed physical street addresses.
+  2. **Dynamic IP Allocation & NAT:** ISPs assign IP addresses dynamically to home subscribers and employ Carrier-Grade NAT (CGNAT), masking thousands of individual users behind shared public IP pools.
+  3. **Privacy & Security Boundaries:** IP lookup websites identify the regional routing exchange point (POP), preserving end-user location privacy.

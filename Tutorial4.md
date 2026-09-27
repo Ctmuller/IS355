@@ -1,5 +1,12 @@
 # IS355: Tutorial 4 - Routing, Traceroute, and IP Geolocation
 
+## Table of Contents
+- [Task 1: View Routing Table](#task-1-view-routing-table)
+- [Task 2: Trace Path Through the Internet](#task-2-trace-path-through-the-internet)
+- [Task 3: IP Address Lookup & Geolocation](#task-3-ip-address-lookup--geolocation)
+
+---
+
 ## Task 1: View Routing Table
 ![Get-NetRoute -Interfaceindex](IM/GetNetRoute)
 
@@ -59,3 +66,27 @@ To analyze internet routing pathways, hop counts, and round-trip delays, three t
 * **Intermediate Hop Count & Processing:** Every router along the 13-hop path must inspect packet headers, perform routing table lookups, and queue packets for transmission, adding processing delay at each node.
 * **Network Congestion & BGP Routing:** Local network traffic operates across high-speed dedicated switches ($<1\text{ ms}$), whereas international traffic crosses multiple peering points subject to dynamic Border Gateway Protocol (BGP) routing and variable traffic congestion.
 
+## Task 3: IP Address Lookup & Geolocation
+
+### Online IP Geolocation Test
+* **Service Used:** [WhatIsMyIPAddress](https://whatismyipaddress.com/)
+* **Detected Information:** Discovered public IPv4 address, host ISP (AWS / Cloud Infrastructure), and regional area (Baltimore / Washington D.C. area).
+* **Accuracy:** Accurately identified the service provider and metropolitan area, but did not pinpoint an exact physical address or individual endpoint device.
+
+![IP Lookup Results](IM/ip-lookup.png)
+
+---
+
+### Multi-Network Comparison
+
+| Connection Type | Public IP Detected | Location Identified | Accuracy Assessment |
+| :--- | :--- | :--- | :--- |
+| **Virtual Desktop / Campus Network** | `XX.XX.XX.XX` | Datacenter / Regional Gateway | Identifies the institutional/cloud datacenter egress point rather than personal location. |
+| **Home / Mobile Network** | `YY.YY.YY.YY` | Metro ISP Point of Presence | Identifies the ISP exchange point within a 10–20 mile radius, not the exact residence. |
+
+---
+
+### Geolocation Database Exploration
+* **Dataset Used:** Downloaded `ip-to-country-lite` CSV database from DB-IP.
+* **Database Insights:** Maps blocks of IP address ranges (assigned by ARIN/RIPE to ASNs) to ISO country codes and regional designations.
+* **Why Pinpoint Precision Fails:** Public IP addresses are assigned to network infrastructure and organizations rather than fixed physical devices. Carrier-Grade NAT (CGNAT), dynamic IP allocation, and VPNs conceal the physical location of the end user.

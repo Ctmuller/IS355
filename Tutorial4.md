@@ -14,4 +14,4 @@
 | **`255.255.255.255/32`** | `0.0.0.0` (On-Link) | `256` | **Limited Broadcast Route:** Directs local broadcast messages to all nodes on the immediate physical network link. |
 
 
-![Tracert](IM/tracert)
+![Tracert](IM/Tracert.png)

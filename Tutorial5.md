@@ -38,3 +38,39 @@ The DNS Root Servers sit at the apex of the Domain Name System hierarchy. They d
 8. **Final IP Return & TCP Handshake:** The DNS Resolver returns the IP address to the user's computer and caches the result. The browser then establishes an HTTP/HTTPS TCP session with the target server.
 
 ### DNS Resolution Flow Diagram
+![DNS Resolution Flow Diagram](./images/DNSResolutionflow.png)
+
+## Task 3: IP Network Design
+
+### a) IP Address Allocation Table
+
+| Device / Component | Interface | Assigned IPv4 Address | Subnet Mask | Gateway / Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **Router 1 (R1)** | `Fa0/0` (LAN 1) | `192.168.1.1` | `255.255.255.0` (/24) | Default Gateway for PCs on LAN 1 |
+| | `s0/0` (WAN) | `192.168.3.1` | `255.255.255.0` (/24) | Point-to-point to R2 |
+| **PC 1 (LAN 1)** | `NIC` | `192.168.1.10` | `255.255.255.0` (/24) | Gateway: `192.168.1.1` |
+| **PC 2 (LAN 1)** | `NIC` | `192.168.1.11` | `255.255.255.0` (/24) | Gateway: `192.168.1.1` |
+| **PC 3 (LAN 1)** | `NIC` | `192.168.1.12` | `255.255.255.0` (/24) | Gateway: `192.168.1.1` |
+| **Router 2 (R2)** | `Fa0/0` (LAN 2) | `192.168.2.1` | `255.255.255.0` (/24) | Default Gateway for PCs on LAN 2 |
+| | `s0/0` (WAN) | `192.168.3.2` | `255.255.255.0` (/24) | Point-to-point to R1 |
+| **PC 4 (LAN 2)** | `NIC` | `192.168.2.10` | `255.255.255.0` (/24) | Gateway: `192.168.2.1` |
+| **PC 5 (LAN 2)** | `NIC` | `192.168.2.11` | `255.255.255.0` (/24) | Gateway: `192.168.2.1` |
+
+### b) Network Diagram Topology
+![IP Network Design Topology](./images/IPNetworkDesign.png)
+
+### c) Simplified Routing Tables
+
+#### **Router 1 Routing Table**
+| Network Destination | Subnet Mask | Next Hop / Interface | Metric |
+| :--- | :--- | :--- | :--- |
+| `192.168.1.0` | `255.255.255.0` | `Directly Connected (Fa0/0)` | 0 |
+| `192.168.3.0` | `255.255.255.0` | `Directly Connected (s0/0)` | 0 |
+| `192.168.2.0` | `255.255.255.0` | `192.168.3.2` (via R2) | 1 |
+
+#### **Router 2 Routing Table**
+| Network Destination | Subnet Mask | Next Hop / Interface | Metric |
+| :--- | :--- | :--- | :--- |
+| `192.168.2.0` | `255.255.255.0` | `Directly Connected (Fa0/0)` | 0 |
+| `192.168.3.0` | `255.255.255.0` | `Directly Connected (s0/0)` | 0 |
+| `192.168.1.0` | `255.255.255.0` | `192.168.3.1` (via R1) | 1 |

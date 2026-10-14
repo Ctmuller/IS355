@@ -38,7 +38,7 @@ The DNS Root Servers sit at the apex of the Domain Name System hierarchy. They d
 8. **Final IP Return & TCP Handshake:** The DNS Resolver returns the IP address to the user's computer and caches the result. The browser then establishes an HTTP/HTTPS TCP session with the target server.
 
 ### DNS Resolution Flow Diagram
-![DNS Resolution Flow Diagram](./images/DNSResolutionflow.png)
+![DNS Resolution Flow Diagram](./images/DNSResolutionFlow.png)
 
 ## Task 3: IP Network Design
 

@@ -250,109 +250,36 @@ Strong encryption, administrative access restrictions, and firmware maintenance 
 
 ## Task 3: Continue Your Project
 
-### Project Overview
+### Project Progress
 
-Our group is designing a secure network infrastructure for a company operating within a single location containing both an office environment and a factory floor.
+Our group continued developing our network design for a manufacturing company with an office building and an attached factory.
 
-The proposed infrastructure includes:
+Our current draft (v0.2) includes a collapsed-core network architecture, IP addressing, VLAN segmentation, and proposed network equipment.
 
-* **Office Network:** Employee workstations, printers, and business systems.
-* **Factory Network:** Industrial equipment, including Programmable Logic Controllers (PLCs), Human-Machine Interfaces (HMIs), and factory workstations.
-* **Wireless Network:** Secure connectivity for authorized employees and visitors.
-* **Security Camera Network:** IP cameras connected to an on-site Network Video Recorder (NVR).
-* **Network Management:** Centralized administration, monitoring, and security configuration.
+### Wireless Network Design
 
-The proposed design uses VLAN segmentation, firewall restrictions, and access controls to separate different device categories and reduce unnecessary network exposure.
+Based on what we learned in Tutorial 6, our network will include two separate wireless networks:
 
-### a) Proposed VLAN Segmentation
+* **Staff Wi-Fi (VLAN 60):** Provides secure wireless access for employees and approved devices using WPA3-Enterprise where supported.
+* **Guest Wi-Fi (VLAN 70):** Provides internet access for visitors while preventing access to internal company systems.
 
-| VLAN ID | Network Segment | Purpose | Security Requirements |
-| :--- | :--- | :--- | :--- |
-| **VLAN 10** | Office Network | Employee workstations and business applications | Authorized access to business resources |
-| **VLAN 20** | Factory Network | PLCs, HMIs, and industrial equipment | Restricted communication with office and external networks |
-| **VLAN 30** | Security Cameras | IP cameras and Network Video Recorder | Access limited to authorized monitoring systems |
-| **VLAN 40** | Guest Wi-Fi | Visitor wireless connectivity | Internet-only access with internal network isolation |
-| **VLAN 50** | Network Management | Switches, routers, firewalls, and AP management | Restricted administrative access |
+Wireless access points will be installed in both the office and factory buildings. The exact number and placement of access points still need to be determined.
 
-*Note: VLAN assignments are proposed and should be verified against the group's final network design.*
+### Network Security
 
-### b) Wireless Network Integration
+Our design uses VLANs and access control lists (ACLs) to separate office computers, factory equipment, security cameras, servers, and wireless devices.
 
-#### Employee Wireless Network
+Guest Wi-Fi will be isolated from internal networks, and only authorized devices will be permitted to communicate with factory equipment.
 
-A dedicated employee SSID should provide secure wireless access for authorized company personnel.
+### Next Steps
 
-Employee devices should use strong authentication and encryption. Wireless traffic would be assigned to an appropriate internal network segment, with access controlled by firewall policies.
+Our group still needs to:
 
-#### Guest Wireless Network
+* Determine the number and placement of wireless access points.
+* Confirm device quantities and network equipment requirements.
+* Review VLAN configurations and network security rules.
+* Get feedback from our professor before finalizing the design.
 
-A separate guest SSID should be mapped to **VLAN 40**, allowing visitors to access the internet without reaching office workstations, factory equipment, or security cameras.
+### Conclusion
 
-Guest network restrictions should include:
-
-* Blocking access to internal private network resources.
-* Enabling wireless client isolation where appropriate.
-* Restricting unnecessary services and communication ports.
-* Applying firewall rules to separate guest traffic from internal systems.
-
-#### Factory Wireless Considerations
-
-The factory environment introduces additional wireless challenges because large machinery, metal structures, and industrial equipment can interfere with radio signals.
-
-Access points should be positioned based on wireless coverage requirements and the physical layout of the building.
-
-Industrial systems such as PLCs and HMIs should remain isolated from general-purpose wireless networks. Wireless access to industrial equipment should only be enabled when operationally required and explicitly authorized.
-
-### c) Wireless Security Architecture
-
-The proposed wireless design incorporates several important security controls:
-
-1. **Authentication:** Require authorized credentials before granting wireless network access.
-2. **Encryption:** Use WPA3 or WPA2-AES to protect wireless communications.
-3. **Network Segmentation:** Separate employee, guest, factory, camera, and management traffic using VLANs.
-4. **Firewall Policies:** Restrict communication between network segments based on operational requirements.
-5. **Access Point Management:** Limit administrative access to authorized personnel.
-6. **Firmware Maintenance:** Keep wireless infrastructure updated to reduce exposure to known vulnerabilities.
-7. **Network Monitoring:** Monitor wireless activity, connected devices, and potential unauthorized access attempts.
-
-These measures support the project's broader security approach based on **NIST SP 800-53** and the **Essential Eight** cybersecurity framework.
-
-### d) Project Development & Next Steps
-
-**Status: In Progress**
-
-The concepts covered in Tutorial 6 help establish the wireless networking requirements for our group's proposed network design.
-
-The following items still need to be addressed:
-
-* [ ] Confirm the number and locations of required wireless access points.
-* [ ] Verify VLAN assignments and corresponding IP addressing plans.
-* [ ] Determine how employee and guest SSIDs will map to network VLANs.
-* [ ] Establish firewall rules between office, factory, security camera, guest, and management networks.
-* [ ] Evaluate wireless coverage and potential interference throughout the office and factory environment.
-* [ ] Incorporate wireless infrastructure into the overall network topology diagram.
-* [ ] Seek feedback from the professor regarding wireless segmentation and security decisions.
-
-### Project Security Considerations
-
-The separation of office, industrial, security, and guest networks reduces the potential impact of unauthorized access or compromised devices.
-
-For example, a visitor connected to the guest Wi-Fi should not be able to access industrial control equipment or security camera recordings.
-
-Similarly, industrial devices should communicate only with the systems necessary for manufacturing operations.
-
-This approach follows the principles of **least privilege, defense in depth, and network segmentation**, which are important components of secure enterprise network design.
-
----
-
-## Conclusion
-
-Tutorial 6 explored wireless networking concepts, including SSIDs, BSSIDs, frequency bands, wireless channels, transmission rates, and access point configurations.
-
-In Task 1, I examined my connection to Loyola University's HoundNet wireless network and documented its 6 GHz connection, channel configuration, transmission rate, security protocol, and signal characteristics.
-
-In Task 2, I explored the TP-Link Archer C6 router emulator, examining its 2.4 GHz and 5 GHz wireless configurations, connected devices, channel settings, and guest network status.
-
-Task 3 focuses on applying these concepts to our group's factory-and-office network design. The proposed wireless architecture emphasizes secure authentication, VLAN segmentation, guest network isolation, and controlled access to industrial systems.
-
-Further development of the network design will continue as our group finalizes its wireless infrastructure and security requirements.
+Tutorial 6 helped us better understand wireless network configuration and security. We can apply these concepts to our project by providing separate staff and guest wireless networks and ensuring that access points are configured securely.

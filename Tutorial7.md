@@ -7,7 +7,7 @@
 - [Task 1: Analyze Ping Packet Capture](#task-1-analyze-ping-packet-capture)
 - [Task 2: Analyzing HTTP Packet Capture](#task-2-analyzing-http-packet-capture)
 - [Task 3: Packet Structure (Optional)](#task-3-packet-structure-optional)
-- [Task 4 & 5: Additional Resources (Optional)](#task-4--5-additional-resources-optional)
+- [Tasks 4 and 5: Additional Resources (Optional)](#tasks-4-and-5-additional-resources-optional)
 - [Conclusion](#conclusion)
 
 ---
@@ -16,109 +16,56 @@
 
 ### Introduction to Cloud Infrastructure
 
-Cloud computing allows organizations to access computing resources, such as virtual machines, storage, databases, and networking services, over the internet without maintaining all the physical infrastructure themselves.
+Cloud computing allows organizations to access computing resources over the internet rather than owning and managing every physical server. Microsoft Azure provides virtual machines, networks, storage, databases, security tools, and monitoring services.
 
-Microsoft Azure is a cloud computing platform that provides infrastructure, applications, storage, and security services.
+The three main cloud service models are:
 
-### Cloud Service Models
+- **Infrastructure as a Service (IaaS):** Customers manage virtual machines, operating systems, and applications while the provider maintains physical infrastructure.
+- **Platform as a Service (PaaS):** Customers build and deploy applications without managing most underlying infrastructure.
+- **Software as a Service (SaaS):** Users access complete applications managed by the provider.
 
-* **Infrastructure as a Service (IaaS):** Provides virtual machines, storage, and networking infrastructure that customers can configure and manage.
-* **Platform as a Service (PaaS):** Provides managed environments for developing and deploying applications without managing the underlying servers.
-* **Software as a Service (SaaS):** Provides ready-to-use applications hosted by a cloud provider and accessed over the internet.
+Cloud infrastructure can be scaled when demand changes, but administrators must understand costs and the shared responsibility for security.
 
-### Important Cloud Computing Concepts
+### Important Azure Services
 
-* **Scalability:** Cloud resources can be increased or decreased based on demand.
-* **Availability:** Cloud services can use redundancy and multiple locations to improve reliability.
-* **Virtualization:** Multiple virtual machines can operate on shared physical infrastructure.
-* **Pay-as-you-go Pricing:** Customers generally pay based on the resources and services they use.
-* **Shared Responsibility:** Security responsibilities are divided between the cloud provider and the customer, depending on the service model.
-
-### Azure Services
-
-| Azure Service | Purpose |
+| Azure Service | Main Purpose |
 | :--- | :--- |
-| **Azure Virtual Machines** | Runs virtual computers in the cloud |
-| **Azure Virtual Network** | Provides private networking for Azure resources |
-| **Azure Storage** | Stores files, objects, and other data |
-| **Azure Resource Groups** | Organizes related cloud resources |
-| **Azure Key Vault** | Protects secrets, encryption keys, and certificates |
-| **Azure Monitor** | Collects monitoring information and performance metrics |
-| **Azure Firewall** | Provides managed network traffic filtering |
+| **Azure Virtual Machines** | Run Windows or Linux computers in the cloud |
+| **Azure Virtual Network (VNet)** | Connect and segment Azure resources |
+| **Network Security Groups (NSGs)** | Filter permitted inbound and outbound network traffic |
+| **Azure Storage** | Store data such as files, objects, and disks |
+| **Resource Groups** | Organize related Azure resources for management |
+| **Azure Key Vault** | Safeguard secrets, keys, and certificates |
+| **Azure Monitor** | Collect monitoring data, logs, and metrics |
 
-### Azure Virtual Machine Configuration
+### Azure Virtual Machine Setup (Optional)
 
-Microsoft Azure allows users to create Windows and Linux virtual machines through the Azure Portal.
+The Microsoft Learn VM quickstart describes creating a Windows virtual machine through the Azure portal. The general steps are to select a resource group, region, operating system image, VM size, authentication method, network settings, and access rules, then review the configuration before deployment.
 
-The basic process involves:
+A VM may be used to host a web server. Network access must be limited to required ports and trusted sources, and storage resources can be attached or managed separately. **No live Azure VM or other paid Azure resource was created for this tutorial.**
 
-1. Sign in to the Azure Portal.
-2. Create or select a resource group.
-3. Configure a virtual machine name and region.
-4. Select an operating system and VM size.
-5. Configure administrator authentication.
-6. Configure virtual networking and access restrictions.
-7. Review the deployment settings and create the resource.
+Reference: [Create a Windows VM in the Azure portal](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal)
 
-Virtual machines can be used to host applications, web servers, development environments, and business services.
+### Microsoft Learn Resource Review
 
-**Azure Portal:** https://portal.azure.com/
+I reviewed the topics presented in the Microsoft Learn materials about Azure virtual networks, storage security, Applied Skills, and Azure Fundamentals.
 
-**Microsoft Learn VM Tutorial:**
-https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal
+**Observation 1 - Virtual networking:** A VNet provides a private networking environment for Azure resources. Subnets organize the network, and NSGs apply traffic rules. These concepts are similar to IP subnetting and access control lists in a local enterprise network.
 
-*Note: Creating a live Azure virtual machine is optional for this tutorial and has not been documented as completed.*
+**Observation 2 - Storage security:** Azure storage must be protected using secure connections, authentication, and appropriate permissions. Encryption alone does not replace access control; users and services should receive only the access they need.
 
-### Microsoft Learn Resources
+**Observation 3 - Cloud credentials:** Microsoft Applied Skills credentials focus on demonstrated tasks and lab-based assessments, while Azure Fundamentals (AZ-900) is a broader entry-level certification exam covering cloud concepts and Azure services.
 
-The tutorial identifies several Microsoft Learn resources covering cloud infrastructure, virtual networking, and security.
+### Resources
 
-**1. Azure Virtual Networking**
+- [AZ-104: Configure and Manage Virtual Networks](https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/)
+- [Implement Security and Manage Access for Azure Storage](https://learn.microsoft.com/en-us/training/modules/implement-storage-account-security/)
+- [Microsoft Applied Skills](https://learn.microsoft.com/en-us/credentials/applied-skills/)
+- [Microsoft Learn - Azure Fundamentals (AZ-900)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/)
 
-Azure Virtual Networks allow cloud resources to communicate securely with each other and with external networks.
+### Connection to IS355
 
-Important components include:
-
-* Virtual networks and subnets.
-* Network Security Groups (NSGs).
-* IP addressing and routing.
-* Virtual network peering.
-* Private and public network connectivity.
-
-https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/
-
-**2. Azure Storage Security**
-
-Azure Storage security includes access controls, encryption, and authentication mechanisms designed to protect cloud-hosted data.
-
-Important considerations include:
-
-* Restricting unauthorized storage access.
-* Using role-based access control.
-* Protecting stored information through encryption.
-* Limiting unnecessary public network exposure.
-
-https://learn.microsoft.com/en-us/training/modules/implement-storageaccount-security/
-
-**3. Microsoft Applied Skills**
-
-Microsoft Applied Skills credentials evaluate specific technical skills through practical assessments.
-
-https://learn.microsoft.com/en-us/credentials/applied-skills/
-
-**4. Azure Fundamentals (AZ-900)**
-
-AZ-900 is an entry-level Microsoft certification covering basic cloud concepts, Azure architecture, services, security, and management.
-
-Unlike Microsoft Applied Skills credentials, AZ-900 requires passing a certification examination.
-
-### Azure and Network Security
-
-Cloud computing introduces additional security considerations because resources may be accessible through public networks.
-
-Organizations should implement appropriate authentication, firewall rules, network segmentation, encryption, and monitoring.
-
-These controls help protect cloud infrastructure and prevent unauthorized access to business information.
+Azure uses many concepts covered in IS355, including subnetting, routing, authentication, access controls, and monitoring. Whether a service runs on a local server or in Azure, it needs secure network access and appropriate protection of sensitive information.
 
 ---
 
@@ -126,13 +73,11 @@ These controls help protect cloud infrastructure and prevent unauthorized access
 
 ### Overview & Inspection
 
-I examined the provided ARP packet capture using Wireshark to understand how ARP and ICMP operate within a local network.
+I analyzed the provided `arp (1).pcap` file to examine how **ARP** resolves local IPv4 addresses into MAC addresses and how **ICMP** supports connectivity testing through ping. The file includes ARP requests and ICMP Echo Request/Reply packets.
 
-ARP (Address Resolution Protocol) resolves IPv4 addresses into MAC addresses, while ICMP (Internet Control Message Protocol) supports network diagnostics, including ping requests and replies.
+### a) Devices and Addresses
 
-### a) Network Devices and Addresses
-
-The following devices were identified in the packet capture.
+The following address pairs were identified in the capture:
 
 | Device | IPv4 Address | MAC Address |
 | :--- | :--- | :--- |
@@ -144,101 +89,76 @@ The following devices were identified in the packet capture.
 
 ![Tutorial 7 Network Topology](IM/Tutorial7Network.png)
 
-*Figure 1: Logical network topology showing identified devices, IP addresses, and MAC addresses.*
+*Figure 1: Logical network diagram showing the addresses observed in the packet capture. The physical switch arrangement cannot be determined from the packets alone.*
 
-The diagram represents the devices communicating on the local Ethernet network. The exact physical switch topology cannot be determined from the capture alone.
+**Editable source:** [`Tutorial7Network.drawio`](IM/Tutorial7Network.drawio)
 
 ### c) Purpose of ARP Packets
 
-ARP allows devices to identify the MAC address associated with a particular IPv4 address on the local network.
+An ARP request is used when a device knows the destination IPv4 address on its local network but needs the corresponding Ethernet MAC address.
 
-The first ARP packet examined was **Packet 11**.
+The first ARP request appears as **packet 11**:
 
-| Property | Value |
+| Field | Observed Value |
 | :--- | :--- |
-| **Sender IP** | `192.168.1.1` |
+| **Operation** | Request (1) |
+| **Sender IPv4** | `192.168.1.1` |
 | **Sender MAC** | `08:00:27:5e:01:7c` |
-| **Target IP** | `192.168.1.105` |
-| **Destination MAC** | `ff:ff:ff:ff:ff:ff` |
-| **Protocol** | ARP Request |
+| **Target IPv4** | `192.168.1.105` |
+| **Target MAC in request** | `00:00:00:00:00:00` (unknown) |
+| **Ethernet Destination** | `ff:ff:ff:ff:ff:ff` (broadcast) |
 
-Device A broadcast an ARP request to determine the MAC address associated with `192.168.1.105`.
+The device at `192.168.1.1` broadcast its request to all devices in the local broadcast domain because it did not yet know the MAC address for `192.168.1.105`.
 
-The request was sent to the broadcast MAC address so devices on the local network could receive it.
+### d) First ARP Packet: Encapsulation
 
-### d) First ARP Packet Structure
+| Component | Size |
+| :--- | ---: |
+| Ethernet II header | 14 bytes |
+| ARP message | 28 bytes |
+| **Total captured length** | **42 bytes** |
 
-The first ARP packet contains an Ethernet II header followed by an ARP message.
+![First ARP Packet Encapsulation](IM/Tutorial7ARP.png)
 
-| Packet Component | Size |
-| :--- | :--- |
-| **Ethernet II Header** | 14 bytes |
-| **ARP Message** | 28 bytes |
-| **Total Captured Length** | 42 bytes |
+*Figure 2: Ethernet II encapsulation of the first ARP request, including header fields and byte lengths.*
 
-![Tutorial 7 ARP Packet Encapsulation](IM/Tutorial7ARP.png)
+**Editable source:** [`Tutorial7ARP.drawio`](IM/Tutorial7ARP.drawio)
 
-*Figure 2: First ARP packet showing Ethernet encapsulation, addressing, and byte sizes.*
-
-The Ethernet header identifies the source and destination MAC addresses, while the ARP message contains the sender and target network addresses.
-
-The Ethernet Frame Check Sequence (FCS) was not included in the captured packet.
+The capture does not include an Ethernet Frame Check Sequence (FCS). No padding bytes are present in this captured packet.
 
 ### e) First Two ICMP Packets
 
-ICMP is used to exchange network diagnostic and control information.
+The first two ICMP packets form an Echo Request/Reply exchange:
 
-The first two ICMP packets represent a ping request and its corresponding reply.
+| Property | Packet 34: Echo Request | Packet 37: Echo Reply |
+| :--- | :--- | :--- |
+| **Source IPv4** | `192.168.1.1` | `192.168.1.104` |
+| **Destination IPv4** | `192.168.1.104` | `192.168.1.1` |
+| **ICMP Type** | 8 (Echo Request) | 0 (Echo Reply) |
+| **ICMP Code** | 0 | 0 |
+| **Captured Length** | 62 bytes | 62 bytes |
 
-#### Packet 34 - ICMP Echo Request
+Packet 34 tests whether `192.168.1.104` can be reached. Packet 37 is the response, demonstrating successful ICMP communication in both directions.
 
-| Property | Value |
-| :--- | :--- |
-| **Packet Number** | 34 |
-| **Source IP** | `192.168.1.1` |
-| **Destination IP** | `192.168.1.104` |
-| **ICMP Type** | 8 (Echo Request) |
-| **ICMP Code** | 0 |
-| **Captured Length** | 62 bytes |
+### f) First ICMP Packet: Encapsulation
 
-Device A sent an ICMP Echo Request to Device B to test whether the destination device was reachable.
+| Component | Size |
+| :--- | ---: |
+| Ethernet II header | 14 bytes |
+| IPv4 header | 20 bytes |
+| ICMP Echo header | 8 bytes |
+| ICMP payload | 20 bytes |
+| **Total captured length** | **62 bytes** |
 
-#### Packet 37 - ICMP Echo Reply
+![First ICMP Packet Encapsulation](IM/Tutorial7ICMP.png)
 
-| Property | Value |
-| :--- | :--- |
-| **Packet Number** | 37 |
-| **Source IP** | `192.168.1.104` |
-| **Destination IP** | `192.168.1.1` |
-| **ICMP Type** | 0 (Echo Reply) |
-| **ICMP Code** | 0 |
-| **Captured Length** | 62 bytes |
+*Figure 3: Encapsulation of packet 34: Ethernet frame, IPv4 header, ICMP Echo header, and payload.*
 
-Device B responded with an ICMP Echo Reply, confirming that the request reached the destination and that a reply could return to the original sender.
-
-### f) First ICMP Packet Structure
-
-An ICMP Echo Request is encapsulated within an IPv4 packet, which is then carried inside an Ethernet frame.
-
-| Packet Component | Size |
-| :--- | :--- |
-| **Ethernet II Header** | 14 bytes |
-| **IPv4 Header** | 20 bytes |
-| **ICMP Header** | 8 bytes |
-| **ICMP Data** | 20 bytes |
-| **Total Captured Length** | 62 bytes |
-
-![Tutorial 7 ICMP Packet Encapsulation](IM/Tutorial7ICMP.png)
-
-*Figure 3: First ICMP Echo Request showing Ethernet, IPv4, and ICMP encapsulation.*
+**Editable source:** [`Tutorial7ICMP.drawio`](IM/Tutorial7ICMP.drawio)
 
 ### Observations & Analysis
 
-The packet capture demonstrates how ARP and ICMP support communication on a local network.
-
-ARP determines the MAC addresses needed for local delivery, while ICMP allows devices to test connectivity using Echo Request and Echo Reply messages.
-
-The successful ping exchange between `192.168.1.1` and `192.168.1.104` confirms that the devices were able to communicate using ICMP.
+ARP provides the link-layer address required for local Ethernet delivery, while ICMP supports testing whether devices can exchange IP packets. The successful Echo Reply demonstrates connectivity between the two observed IPv4 endpoints.
 
 ---
 
@@ -246,161 +166,151 @@ The successful ping exchange between `192.168.1.1` and `192.168.1.104` confirms 
 
 ### Overview & Inspection
 
-I analyzed the provided HTTP packet capture using Wireshark to understand the TCP three-way handshake and how TCP establishes reliable communication before application data is transferred.
+I analyzed `Sample 7 (3).pcap` to identify the **TCP three-way handshake** and the first HTTP application-data packet. The file contains 40 packets in a connection between `192.168.1.2` and `174.143.213.184` using TCP port 80.
 
-The capture contains 40 packets showing TCP connection establishment, HTTP data transfer, and connection termination.
+### Initial SYN Packet
 
-### TCP Three-Way Handshake
+**1. What packet number is the first SYN?**  
+**Packet 1.**
 
-#### Initial SYN Packet
+**2. What are the source and destination IP addresses?**  
+Source: `192.168.1.2`  
+Destination: `174.143.213.184`
 
-**1. What packet number is the first SYN?**
+**3. What source and destination ports are used?**  
+Source port: `54841`  
+Destination port: `80` (HTTP)
 
-The first SYN is **Packet 1**.
-
-**2. What are the source and destination IP addresses?**
-
-* Source IP: `192.168.1.2`
-* Destination IP: `174.143.213.184`
-
-**3. What source and destination ports are used?**
-
-* Source Port: `54841`
-* Destination Port: `80` (HTTP)
-
-**4. What is the raw sequence number?**
-
+**4. What is the raw sequence number?**  
 `4129057982`
 
-#### SYN-ACK Response
+### SYN-ACK Response
 
-**5. What packet number is the SYN-ACK response?**
+**5. What packet number is the SYN-ACK response?**  
+**Packet 2.**
 
-The SYN-ACK response is **Packet 2**.
+**6. What flags are set?**  
+**SYN** and **ACK**.
 
-**6. What flags are set?**
+**7. What are the server's raw sequence and acknowledgment numbers?**  
+Raw sequence number: `4200111240`  
+Raw acknowledgment number: `4129057983`
 
-The **SYN** and **ACK** flags are set.
+**8. Why is the acknowledgment number what it is?**  
+A SYN consumes one TCP sequence number, so the server acknowledges the client's initial sequence number plus one: `4129057982 + 1 = 4129057983`.
 
-**7. What are the server's raw sequence and acknowledgment numbers?**
+### Final ACK
 
-* Raw Sequence Number: `4200111240`
-* Raw Acknowledgment Number: `4129057983`
+**9. What packet number is the final ACK?**  
+**Packet 3.**
 
-**8. Why is the acknowledgment number what it is?**
+**10. What flags are set?**  
+**ACK**.
 
-The server acknowledges the client's initial sequence number plus one.
+**11. What raw acknowledgment number is returned?**  
+`4200111241`. This acknowledges the server's SYN, which also consumes one sequence number.
 
-The SYN flag consumes one TCP sequence number, so the acknowledgment number is:
+### First Application Data
 
-`4129057982 + 1 = 4129057983`
+**12. Which packet first contains application data, and what flags are set?**  
+**Packet 4**, with **PSH** and **ACK** set. It carries the request `GET /images/layout/logo.png HTTP/1.1` to `packetlife.net`.
 
-#### Final ACK Response
+- **PSH (Push):** Requests prompt delivery of received TCP data to the application.
+- **ACK (Acknowledgment):** Indicates that the acknowledgment number is valid and acknowledges data received from the other endpoint.
 
-**9. What packet number is the final ACK?**
-
-The final ACK is **Packet 3**.
-
-**10. What flags are set?**
-
-The **ACK** flag is set.
-
-**11. What is the raw acknowledgment number?**
-
-`4200111241`
-
-This acknowledges the server's initial sequence number plus one.
-
-### Application Data Transfer
-
-**12. Which packet is the first packet containing application data? What flags are set, and what do they mean?**
-
-The first packet containing application data is **Packet 4**.
-
-| Property | Value |
-| :--- | :--- |
-| **Packet Number** | 4 |
-| **Source IP** | `192.168.1.2` |
-| **Destination IP** | `174.143.213.184` |
-| **Source Port** | 54841 |
-| **Destination Port** | 80 |
-| **TCP Flags** | PSH, ACK |
-| **Application Protocol** | HTTP |
-| **HTTP Request** | `GET /images/layout/logo.png HTTP/1.1` |
-
-* **PSH (Push):** Requests that received data be delivered promptly to the receiving application.
-* **ACK (Acknowledgment):** Indicates that the acknowledgment field is valid and confirms receipt of previous TCP data.
-
-### TCP Handshake Summary
+### TCP Connection Summary
 
 | Packet | Source | Destination | TCP Flags | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **1** | Client | Server | SYN | Initiates the TCP connection |
-| **2** | Server | Client | SYN, ACK | Acknowledges the request and initiates the server side |
-| **3** | Client | Server | ACK | Completes the TCP handshake |
-| **4** | Client | Server | PSH, ACK | Transmits the HTTP GET request |
+| **1** | Client | Server | SYN | Requests a connection |
+| **2** | Server | Client | SYN, ACK | Acknowledges and responds to the request |
+| **3** | Client | Server | ACK | Completes the handshake |
+| **4** | Client | Server | PSH, ACK | Sends the HTTP GET request |
 
 ### Observations & Analysis
 
-The TCP three-way handshake establishes a connection through three packets: SYN, SYN-ACK, and ACK.
-
-Sequence and acknowledgment numbers allow the client and server to track transmitted data and confirm successful receipt.
-
-Once the handshake is completed, the client sends an HTTP GET request to retrieve content from the server.
-
-This activity demonstrates how TCP provides reliable, ordered communication for application protocols such as HTTP.
+The three-way handshake coordinates the initial sequence numbers used by both devices before application data is exchanged. After the handshake, packet 4 carries the first HTTP request. The server later responds with `HTTP/1.1 200 OK` and transfers the requested image.
 
 ---
 
 ## Task 3: Packet Structure (Optional)
 
-### Overview
+### Inter-LAN Packet Forwarding Example
 
-When an ICMP packet travels between two different LANs, routers forward the IP packet between networks.
+This optional example reuses the two-LAN addressing scheme from Tutorial 5. **It is an illustrative network, not a topology discovered in the Tutorial 7 PCAP.**
 
-The IP source and destination addresses generally remain the same during normal routing, while the Ethernet source and destination MAC addresses change at each routed hop.
+| Device | Interface | IPv4 Address |
+| :--- | :--- | :--- |
+| Host A | LAN 1 NIC | `192.168.1.10` |
+| Router 1 | LAN interface | `192.168.1.1` |
+| Router 1 | WAN interface | `192.168.3.1` |
+| Router 2 | WAN interface | `192.168.3.2` |
+| Router 2 | LAN interface | `192.168.2.1` |
+| Host B | LAN 2 NIC | `192.168.2.10` |
 
-For example:
+### a) Network Diagram
 
-* **Source IP:** The original sending host.
-* **Destination IP:** The final receiving host.
-* **Source MAC:** The device transmitting the Ethernet frame on the current LAN.
-* **Destination MAC:** The next-hop device or receiving host on that LAN.
+![Inter-LAN Network Topology](IM/Tutorial7InterLAN.png)
 
-This demonstrates the difference between Layer 2 Ethernet addressing and Layer 3 IP addressing.
+**Editable source:** [`Tutorial7InterLAN.drawio`](IM/Tutorial7InterLAN.drawio)
 
-**Status:** Optional packet structure activity not yet completed.
+### b) Routing Tables
+
+**Router 1**
+
+| Destination Network | Next Hop |
+| :--- | :--- |
+| `192.168.1.0/24` | Directly connected |
+| `192.168.3.0/24` | Directly connected |
+| `192.168.2.0/24` | `192.168.3.2` |
+
+**Router 2**
+
+| Destination Network | Next Hop |
+| :--- | :--- |
+| `192.168.2.0/24` | Directly connected |
+| `192.168.3.0/24` | Directly connected |
+| `192.168.1.0/24` | `192.168.3.1` |
+
+### c) ICMP Packet on the Inter-Router Link
+
+When Host A pings Host B, the IPv4 packet contains:
+
+- **Source IPv4:** `192.168.1.10`
+- **Destination IPv4:** `192.168.2.10`
+- **Protocol:** ICMP
+- **ICMP Type:** 8 (Echo Request)
+
+On an **Ethernet-based link** between Router 1 and Router 2, the Ethernet frame would have Router 1's outgoing-interface MAC as its source and Router 2's receiving-interface MAC as its destination. The host IPv4 source and destination remain unchanged during ordinary routing; MAC addresses are rewritten at each Ethernet hop. Other WAN link types use different link-layer encapsulation.
+
+![Inter-LAN ICMP Packet Structure](IM/Tutorial7InterLANPacket.png)
+
+**Editable source:** [`Tutorial7InterLANPacket.drawio`](IM/Tutorial7InterLANPacket.drawio)
 
 ---
 
-## Task 4 & 5: Additional Resources (Optional)
+## Tasks 4 and 5: Additional Resources (Optional)
 
-### Network Security and Malware Traffic
+### Malware Traffic Analysis
 
-The tutorial provides additional resources for exploring real-world network traffic and security incidents.
+I reviewed the Malware-Traffic-Analysis.net resources listed in the tutorial. They provide packet-capture exercises and examples of suspicious network activity for practice with tools such as Wireshark.
 
-**Malware Traffic Analysis:**
+Interesting points:
 
-https://www.malware-traffic-analysis.net/index.html
+- Packet captures can reveal patterns in DNS requests, HTTP traffic, and connections that may warrant security investigation.
+- Practice PCAP files help connect basic protocol knowledge with real cybersecurity analysis.
+- The site's exercises provide examples beyond ordinary ARP, ICMP, and TCP connectivity checks.
 
-This resource provides packet captures and exercises that can be used to practice identifying suspicious network activity.
+Resources:
 
-**Bluesky Profile:**
-
-https://bsky.app/profile/malware-traffic-analysis.net
-
-These resources may be useful for further Wireshark practice and cybersecurity analysis.
+- [Malware Traffic Analysis](https://www.malware-traffic-analysis.net/index.html)
+- [Training Exercises](https://www.malware-traffic-analysis.net/training-exercises.html)
+- [Malware Traffic Analysis on Bluesky](https://bsky.app/profile/malware-traffic-analysis.net)
 
 ---
 
 ## Conclusion
 
-Tutorial 7 focused on cloud computing infrastructure and the analysis of network packets using Wireshark.
+Tutorial 7 connected cloud computing concepts with practical network traffic analysis. In the Azure portion, I reviewed virtual networks, storage security, monitoring tools, and Microsoft's entry-level credentials. In Wireshark, I studied how ARP discovers MAC addresses, how ICMP verifies connectivity, and how TCP establishes a reliable connection before HTTP data transfer begins.
 
-The Azure portion introduced cloud infrastructure, virtual machines, networking, storage, and cloud security concepts.
-
-The ARP and ICMP packet analysis demonstrated how devices discover MAC addresses and test connectivity on a local network.
-
-The HTTP packet analysis demonstrated how TCP establishes a connection using the three-way handshake before transmitting application data.
-
-Together, these activities reinforce the importance of understanding networking protocols, packet encapsulation, reliable communication, and secure infrastructure design.
+The packet diagrams and addressing tables made the relationship between Ethernet framing, IP addressing, and transport/application protocols easier to understand. These concepts are useful when troubleshooting networks and designing secure local or cloud infrastructure.

@@ -16,51 +16,63 @@ Wireless networks use radio frequencies to allow devices to communicate with Wir
 
 Wi-Fi networks commonly operate on the **2.4 GHz, 5 GHz, and 6 GHz frequency bands**, depending on the wireless standard and device capabilities.
 
-### Wi-Fi Inspection Commands
+For this activity, I examined my MacBook's wireless connection to **HoundNet**, Loyola University Maryland's wireless network, using the macOS Wi-Fi information menu.
 
-On a Windows computer, PowerShell can be used to examine wireless connections using the following commands:
+### Wi-Fi Inspection Method
 
-```powershell
-Install-Module WiFiTools
-Show-WiFiState
-Scan-WiFiAPs
-Show-WiFiInterface
-Get-WiFiLog | Select-Object -First 10
-```
+On macOS, holding the **Option (⌥)** key while clicking the Wi-Fi icon displays detailed wireless connection information, including the SSID, BSSID, frequency band, channel, signal strength, and transmission rate.
 
-Alternatively, Windows provides the following built-in command:
-
-```powershell
-netsh wlan show interfaces
-```
-
-On macOS, holding the **Option (⌥)** key while clicking the Wi-Fi icon displays connection information, including the SSID, BSSID, channel, and transmission rate.
+I used this method to collect information about my active wireless connection.
 
 ### Wireless Access Point Information
 
 | Property | Access Point 1 |
 | :--- | :--- |
-| **SSID** | [Enter Network Name] |
-| **BSSID** | [Enter MAC Address] |
-| **Frequency Band** | [2.4 GHz / 5 GHz / 6 GHz] |
-| **Channel** | [Enter Channel Number] |
-| **Data Rate (Tx Rate)** | [Enter Mbps] |
+| **SSID** | HoundNet |
+| **BSSID** | `94:64:24:fc:45:d4` |
+| **Frequency Band** | 6 GHz |
+| **Channel** | 101 |
+| **Channel Width** | 160 MHz |
+| **Data Rate (Tx Rate)** | 1,729 Mbps |
+| **Wireless Security** | WPA2 Enterprise |
+| **Wi-Fi Standard** | 802.11ax |
+| **Signal Strength (RSSI)** | -54 dBm |
+| **Noise Level** | -94 dBm |
+| **MCS Index** | 8 |
+| **Spatial Streams (NSS)** | 2 |
+
+### IP Network Configuration
+
+My MacBook received its IP configuration automatically through DHCP.
+
+| Property | Observed Value |
+| :--- | :--- |
+| **IPv4 Address** | `10.233.153.197` |
+| **Subnet Mask** | `255.255.224.0` (/19) |
+| **Default Gateway** | `10.233.128.1` |
+| **IP Configuration** | DHCP |
+| **IPv6 Configuration** | Automatic |
 
 ### Understanding Wireless Network Properties
 
-* **SSID (Service Set Identifier):** The name assigned to a wireless network, allowing users to identify available networks.
-* **BSSID (Basic Service Set Identifier):** The MAC address identifying a particular wireless access point or radio interface.
-* **Frequency Band:** Determines the radio frequency range used for communication. The 2.4 GHz band generally offers greater range, while 5 GHz and 6 GHz can provide higher speeds and additional capacity.
-* **Wireless Channel:** A specific section of the frequency spectrum used by an access point. Overlapping channels can introduce interference and reduce network performance.
-* **Data Rate:** The negotiated wireless transmission speed between the device and access point, typically measured in megabits per second (Mbps). This differs from actual internet throughput.
+* **SSID (Service Set Identifier):** HoundNet identifies the wireless network provided by Loyola University Maryland.
+* **BSSID (Basic Service Set Identifier):** The address `94:64:24:fc:45:d4` identifies the specific wireless access point radio to which my MacBook was connected.
+* **Frequency Band:** The connection uses the 6 GHz frequency band, providing additional wireless spectrum and supporting high-speed data transmission.
+* **Wireless Channel:** Channel 101 identifies the operating channel. The 160 MHz channel width allows the connection to utilize a wider portion of the available frequency spectrum.
+* **Data Rate:** The negotiated transmission rate was 1,729 Mbps. This represents the wireless link rate rather than actual internet throughput.
+* **Wireless Security:** WPA2 Enterprise provides enterprise authentication and encryption for organizational wireless networks.
+* **Signal Strength:** The RSSI of -54 dBm indicates a strong wireless signal.
+* **Noise Level:** The reported noise level was -94 dBm, producing a signal-to-noise ratio of approximately 40 dB.
 
 ### Observations & Analysis
 
-The information provided by wireless network inspection tools is important for understanding network performance and identifying potential connectivity problems.
+The HoundNet wireless connection operated using the **802.11ax standard on the 6 GHz frequency band**, with a negotiated transmission rate of 1,729 Mbps.
 
-A device connected to a crowded 2.4 GHz channel may experience more interference than one connected to a less congested 5 GHz channel. Similarly, the distance between a device and its access point, physical obstructions, and wireless signal strength can affect connection speeds.
+The connection demonstrated strong signal quality, with an RSSI of -54 dBm and a signal-to-noise ratio of approximately 40 dB.
 
-Analyzing SSIDs, BSSIDs, channels, and data rates helps network administrators identify interference, evaluate wireless coverage, and optimize access point placement.
+The 160 MHz channel width provides substantial potential wireless throughput, although actual performance depends on network congestion, interference, and other environmental conditions.
+
+This activity demonstrated how wireless network information can be used to evaluate connectivity, identify possible interference, and troubleshoot network performance.
 
 ---
 
@@ -68,71 +80,171 @@ Analyzing SSIDs, BSSIDs, channels, and data rates helps network administrators i
 
 ### Overview & Configuration
 
-Wireless Access Points provide connectivity between wireless devices and a wired network. Their management interfaces allow administrators to configure wireless security, frequency bands, network identifiers, authentication methods, and access restrictions.
+Wireless Access Points provide connectivity between wireless devices and wired networks. Their management interfaces allow administrators to configure wireless security, frequency bands, network identifiers, authentication methods, and access restrictions.
 
-The TP-Link router emulator provides an alternative method of exploring wireless configuration settings without requiring access to a physical router.
+For this activity, I explored the **TP-Link Archer C6 wireless router** using the TP-Link online router emulator.
 
 **TP-Link Emulator:** https://www.tp-link.com/au/support/emulator/
 
-Example router models include the **TP-Link Archer C6** and **TL-WR841N**.
+The Archer C6 supports both 2.4 GHz and 5 GHz wireless networks and provides configuration options for wireless channels, network names, operating modes, and guest connectivity.
+
+### Router Overview
+
+The emulator displayed an active internet connection, two wired clients, and zero wireless clients.
+
+| Property | Observed Value |
+| :--- | :--- |
+| **Router Model** | TP-Link Archer C6 |
+| **Internet Connection** | Connected |
+| **Wireless Bands** | 2.4 GHz and 5 GHz |
+| **Wired Clients** | 2 |
+| **Wireless Clients** | 0 |
+| **2.4 GHz Guest Network** | Disabled |
+| **5 GHz Guest Network** | Disabled |
+
+### 2.4 GHz Wireless Configuration
+
+I examined the 2.4 GHz wireless settings to identify the network's operating mode, channel selection, and access point information.
+
+| Configuration Setting | Observed Value |
+| :--- | :--- |
+| **Network Name (SSID)** | TP-Link_593D |
+| **Wireless Radio** | Enabled |
+| **Wireless Mode** | 802.11b/g/n mixed |
+| **Channel Width** | Auto |
+| **Wireless Channel** | Auto (Current Channel 6) |
+| **MAC Address** | C4-E9-83-EF-59-3C |
+| **WDS Status** | Disabled |
+| **Guest Network** | Disabled |
+
+### 5 GHz Wireless Configuration
+
+I also examined the 5 GHz wireless settings to compare the router's frequency bands and supported wireless standards.
+
+| Configuration Setting | Observed Value |
+| :--- | :--- |
+| **Network Name (SSID)** | TP-Link_593D_5G |
+| **Wireless Radio** | Enabled |
+| **Wireless Mode** | 802.11a/n/ac mixed |
+| **Channel Width** | Auto |
+| **Wireless Channel** | Auto (Current Channel 44) |
+| **MAC Address** | C4-E9-83-EF-59-3B |
+| **WDS Status** | Disabled |
+| **Guest Network** | Disabled |
+
+### Connected Wired Clients
+
+The Archer C6 router emulator also displayed two wired devices connected to the local network.
+
+| Device Name | IPv4 Address | MAC Address |
+| :--- | :--- | :--- |
+| **LEO-MS-7529** | `192.168.0.24` | `F8-D1-11-B5-44-78` |
+| **TPUSER** | `192.168.0.27` | `40-8D-5C-21-72-F6` |
+
+Both devices use private IPv4 addresses within the `192.168.0.x` range.
+
+The router's client management interface allows administrators to identify connected devices and review assigned IP addresses and MAC addresses.
 
 ### Important Wireless Access Point Settings
 
 | Setting | Recommended Configuration | Security / Performance Consideration |
 | :--- | :--- | :--- |
-| **SSID** | Unique, recognizable network name | Identifies the network without revealing sensitive information |
+| **SSID** | Unique, recognizable network name | Identifies the network without exposing sensitive information |
 | **Wireless Security** | WPA3-Personal or WPA2-AES | Protects wireless communication through encryption and authentication |
-| **Wi-Fi Password** | Strong, unique password | Prevents unauthorized users from accessing the network |
-| **Frequency Band** | 5 GHz preferred for capable devices; 2.4 GHz when needed | Balances connection speed, range, and compatibility |
+| **Wi-Fi Password** | Strong, unique password | Prevents unauthorized wireless access |
+| **Frequency Band** | 5 GHz for high-performance devices; 2.4 GHz for compatibility | Balances speed, range, and device support |
 | **Wireless Channel** | Select channels with minimal interference | Reduces congestion and improves connection stability |
-| **Channel Width** | 20 MHz on 2.4 GHz; 40/80 MHz on 5 GHz as appropriate | Balances throughput and interference |
-| **Guest Network** | Enable with internal network isolation | Allows visitor internet access without exposing internal resources |
-| **WPS** | Disabled | Reduces unnecessary wireless connection vulnerabilities |
-| **Administrative Access** | Unique credentials and restricted management access | Prevents unauthorized router configuration changes |
-| **Firmware Updates** | Latest supported stable firmware | Addresses security vulnerabilities and improves reliability |
+| **Channel Width** | 20 MHz on 2.4 GHz; 40/80 MHz on 5 GHz when appropriate | Balances throughput and interference |
+| **Guest Network** | Enable with internal network isolation | Allows visitor internet access without exposing company resources |
+| **WPS** | Disabled | Reduces unnecessary security risks |
+| **Administrative Access** | Unique credentials and restricted access | Prevents unauthorized configuration changes |
+| **Firmware Updates** | Latest supported stable firmware | Addresses security vulnerabilities and reliability issues |
 
 ### Recommended Configuration Changes
 
 #### 1. Wireless Security & Authentication
-The wireless network should use **WPA3-Personal** when supported or **WPA2-AES** for compatibility with older devices. Outdated security protocols such as WEP and WPA using TKIP should be avoided because they contain known security weaknesses.
 
-For enterprise environments, WPA3-Enterprise or WPA2-Enterprise with centralized authentication may be more appropriate than a shared wireless password.
+I would configure the wireless network to use **WPA3-Personal** if supported or **WPA2-AES** for compatibility with older devices.
+
+Outdated protocols such as WEP and WPA using TKIP should be avoided because they contain known security weaknesses.
+
+For an enterprise environment, WPA2-Enterprise or WPA3-Enterprise with centralized authentication may be more appropriate.
+
+The router's current encryption configuration has not yet been verified.
 
 #### 2. Frequency Band Selection
-Devices requiring higher throughput should preferably connect using the **5 GHz band**, while 2.4 GHz can accommodate older devices and areas requiring greater signal penetration.
 
-Access point placement should account for building construction, interference, and the number of connected devices.
+The Archer C6 provides separate 2.4 GHz and 5 GHz wireless networks.
+
+* **2.4 GHz:** Supports 802.11b/g/n mixed mode and generally provides greater range and better signal penetration.
+* **5 GHz:** Supports 802.11a/n/ac mixed mode and generally provides higher speeds and more available non-overlapping channels.
+
+I would prioritize 5 GHz for employee devices requiring higher throughput while maintaining 2.4 GHz for devices needing additional coverage or compatibility.
 
 #### 3. Wireless Channel Management
-Wireless channels should be selected based on the surrounding wireless environment.
 
-Within the 2.4 GHz band, **channels 1, 6, and 11** are commonly used in the United States because they avoid overlap when operating at 20 MHz channel widths.
+The router currently uses automatic channel selection on both wireless bands.
 
-For 5 GHz networks, channel selection should account for nearby access points, available spectrum, and regulatory restrictions.
+* **2.4 GHz:** Channel 6
+* **5 GHz:** Channel 44
 
-#### 4. Guest Network Isolation
-A dedicated guest wireless network should be configured to allow visitors to access the internet while preventing communication with internal company systems.
+Within the 2.4 GHz band, channels **1, 6, and 11** are commonly preferred in the United States when using 20 MHz channel widths because they avoid overlapping with each other.
 
-Network segmentation can be implemented through a dedicated **Guest VLAN**, firewall access control rules, and wireless client isolation.
+I would maintain automatic channel selection unless a wireless site survey indicated that manually selecting channels would provide better performance.
 
-#### 5. Administrative Security
-Default router administrator credentials should be replaced with strong, unique credentials. Unnecessary remote administration features and WPS should be disabled.
+#### 4. Channel Width Configuration
 
-Firmware should also be updated regularly to address known vulnerabilities.
+Both wireless networks currently use automatic channel width selection.
 
-### Access Point Configuration Screenshot
+For a crowded 2.4 GHz environment, I would consider configuring a fixed 20 MHz width to minimize interference.
 
-![Wireless Access Point Configuration](IM/WirelessAPSettings.png)
+On the 5 GHz network, wider channels may improve performance if sufficient spectrum is available and interference is limited.
 
-*Figure 1: Wireless access point management interface showing configurable network settings.*
+#### 5. Guest Network Isolation
+
+The router's 2.4 GHz and 5 GHz guest networks are currently disabled.
+
+For a business environment, I would enable a dedicated guest wireless network and restrict access to internal company resources.
+
+Guest devices should only be permitted to access the internet, with firewall rules preventing communication with employee computers, factory equipment, and security cameras.
+
+#### 6. Administrative Security
+
+I would replace default administrative credentials, disable unnecessary remote management features, and keep the router firmware updated.
+
+I would also leave **Wireless Distribution System (WDS)** disabled unless wireless bridging was specifically required.
+
+### Access Point Configuration Screenshots
+
+**Router Overview**
+
+![TP-Link Archer C6 Router Overview](IM/WirelessAPSettings.png)
+
+*Figure 1: TP-Link Archer C6 router emulator displaying wireless network information and guest network status.*
+
+**2.4 GHz Configuration**
+
+![2.4 GHz Wireless Settings](IM/Wireless24GHz.png)
+
+*Figure 2: TP-Link Archer C6 2.4 GHz wireless configuration.*
+
+**5 GHz Configuration**
+
+![5 GHz Wireless Settings](IM/Wireless5GHz.png)
+
+*Figure 3: TP-Link Archer C6 5 GHz wireless configuration.*
 
 ### Security & Performance Analysis
 
-Proper access point configuration is essential for maintaining a secure and reliable wireless network.
+The TP-Link Archer C6 demonstrates how wireless access point configuration affects network performance, compatibility, and security.
 
-Wireless encryption protects transmitted information, while authentication controls which users and devices can connect. Channel planning and frequency selection reduce interference and improve overall network performance.
+The router operates separate wireless networks for 2.4 GHz and 5 GHz, allowing devices to connect using different wireless standards.
 
-Separating guest and employee wireless traffic further protects internal resources by restricting unnecessary communication between different network segments.
+Both frequency bands use automatic channel selection, and the management interface provides visibility into connected devices and network configurations.
+
+One important security consideration is that both guest networks are currently disabled. In an enterprise environment, enabling an isolated guest network would provide visitors with internet access while protecting internal company resources.
+
+Strong encryption, administrative access restrictions, and firmware maintenance are additional measures that help secure wireless infrastructure.
 
 ---
 
@@ -150,7 +262,7 @@ The proposed infrastructure includes:
 * **Security Camera Network:** IP cameras connected to an on-site Network Video Recorder (NVR).
 * **Network Management:** Centralized administration, monitoring, and security configuration.
 
-The network design uses **VLAN segmentation, firewall restrictions, and access controls** to separate different device categories and reduce unnecessary network exposure.
+The proposed design uses VLAN segmentation, firewall restrictions, and access controls to separate different device categories and reduce unnecessary network exposure.
 
 ### a) Proposed VLAN Segmentation
 
@@ -167,11 +279,13 @@ The network design uses **VLAN segmentation, firewall restrictions, and access c
 ### b) Wireless Network Integration
 
 #### Employee Wireless Network
+
 A dedicated employee SSID should provide secure wireless access for authorized company personnel.
 
 Employee devices should use strong authentication and encryption. Wireless traffic would be assigned to an appropriate internal network segment, with access controlled by firewall policies.
 
 #### Guest Wireless Network
+
 A separate guest SSID should be mapped to **VLAN 40**, allowing visitors to access the internet without reaching office workstations, factory equipment, or security cameras.
 
 Guest network restrictions should include:
@@ -182,6 +296,7 @@ Guest network restrictions should include:
 * Applying firewall rules to separate guest traffic from internal systems.
 
 #### Factory Wireless Considerations
+
 The factory environment introduces additional wireless challenges because large machinery, metal structures, and industrial equipment can interfere with radio signals.
 
 Access points should be positioned based on wireless coverage requirements and the physical layout of the building.
@@ -204,17 +319,19 @@ These measures support the project's broader security approach based on **NIST S
 
 ### d) Project Development & Next Steps
 
-The concepts covered in Tutorial 6 help establish the wireless networking requirements for the group's proposed network design.
+**Status: In Progress**
 
-The following items should be addressed before finalizing the design:
+The concepts covered in Tutorial 6 help establish the wireless networking requirements for our group's proposed network design.
 
-* Confirm the number and locations of required wireless access points.
-* Verify VLAN assignments and corresponding IP addressing plans.
-* Determine how employee and guest SSIDs will map to network VLANs.
-* Establish firewall rules between office, factory, security camera, guest, and management networks.
-* Evaluate wireless coverage and potential interference throughout the office and factory environment.
-* Incorporate wireless infrastructure into the overall network topology diagram.
-* Seek feedback from the professor regarding wireless segmentation and network security decisions.
+The following items still need to be addressed:
+
+* [ ] Confirm the number and locations of required wireless access points.
+* [ ] Verify VLAN assignments and corresponding IP addressing plans.
+* [ ] Determine how employee and guest SSIDs will map to network VLANs.
+* [ ] Establish firewall rules between office, factory, security camera, guest, and management networks.
+* [ ] Evaluate wireless coverage and potential interference throughout the office and factory environment.
+* [ ] Incorporate wireless infrastructure into the overall network topology diagram.
+* [ ] Seek feedback from the professor regarding wireless segmentation and security decisions.
 
 ### Project Security Considerations
 
@@ -230,11 +347,12 @@ This approach follows the principles of **least privilege, defense in depth, and
 
 ## Conclusion
 
-Tutorial 6 explored the fundamental components of wireless networking, including SSIDs, BSSIDs, frequency bands, wireless channels, transmission rates, and access point configuration.
+Tutorial 6 explored wireless networking concepts, including SSIDs, BSSIDs, frequency bands, wireless channels, transmission rates, and access point configurations.
 
-Understanding these properties is important for identifying wireless connectivity issues and developing networks that balance speed, coverage, reliability, and security.
+In Task 1, I examined my connection to Loyola University's HoundNet wireless network and documented its 6 GHz connection, channel configuration, transmission rate, security protocol, and signal characteristics.
 
-The tutorial also demonstrated how wireless network security settings, guest isolation, and VLAN segmentation can be incorporated into our factory-and-office network project.
+In Task 2, I explored the TP-Link Archer C6 router emulator, examining its 2.4 GHz and 5 GHz wireless configurations, connected devices, channel settings, and guest network status.
 
-Applying these concepts will help our group develop a secure, organized, and scalable network infrastructure.
+Task 3 focuses on applying these concepts to our group's factory-and-office network design. The proposed wireless architecture emphasizes secure authentication, VLAN segmentation, guest network isolation, and controlled access to industrial systems.
 
+Further development of the network design will continue as our group finalizes its wireless infrastructure and security requirements.

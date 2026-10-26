@@ -252,7 +252,6 @@ This optional example reuses the two-LAN addressing scheme from Tutorial 5. **It
 
 ![Inter-LAN Network Topology](IM/Tutorial7InterLAN.png)
 
-**Editable source:** [`Tutorial7InterLAN.drawio`](IM/Tutorial7InterLAN.drawio)
 
 ### b) Routing Tables
 
@@ -285,7 +284,7 @@ On an **Ethernet-based link** between Router 1 and Router 2, the Ethernet frame 
 
 ![Inter-LAN ICMP Packet Structure](IM/Tutorial7InterLANPacket.png)
 
-**Editable source:** [`Tutorial7InterLANPacket.drawio`](IM/Tutorial7InterLANPacket.drawio)
+
 
 ---
 

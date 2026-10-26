@@ -91,7 +91,7 @@ The following address pairs were identified in the capture:
 
 *Figure 1: Logical network diagram showing the addresses observed in the packet capture. The physical switch arrangement cannot be determined from the packets alone.*
 
-**Editable source:** [`Tutorial7Network.drawio`](IM/Tutorial7Network.drawio)
+
 
 ### c) Purpose of ARP Packets
 
@@ -122,7 +122,6 @@ The device at `192.168.1.1` broadcast its request to all devices in the local br
 
 *Figure 2: Ethernet II encapsulation of the first ARP request, including header fields and byte lengths.*
 
-**Editable source:** [`Tutorial7ARP.drawio`](IM/Tutorial7ARP.drawio)
 
 The capture does not include an Ethernet Frame Check Sequence (FCS). No padding bytes are present in this captured packet.
 
@@ -154,7 +153,7 @@ Packet 34 tests whether `192.168.1.104` can be reached. Packet 37 is the respons
 
 *Figure 3: Encapsulation of packet 34: Ethernet frame, IPv4 header, ICMP Echo header, and payload.*
 
-**Editable source:** [`Tutorial7ICMP.drawio`](IM/Tutorial7ICMP.drawio)
+
 
 ### Observations & Analysis
 

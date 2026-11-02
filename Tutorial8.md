@@ -1,10 +1,4 @@
-
-
-# IS355
-
-**Colin Muller**  
 **Networking and Cyber Security — Tutorial 8: Attacks and Vulnerabilities**  
-**November 2, 2026**
 
 ---
 

@@ -1,5 +1,8 @@
 
 # IS355: Tutorial 7 - Azure Cloud Computing and Packet Analysis
+---
+
+[Course Journal](Main.md) | [Tutorial 6](Tutorial6.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 

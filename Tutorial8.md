@@ -2,7 +2,7 @@
 
 ---
 
-[Course Journal](README.md) | [Tutorial 7](Tutorial7.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 7](Tutorial7.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Task 1 — CIA Protections
 

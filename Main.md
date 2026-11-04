@@ -14,4 +14,4 @@
 * [M5: Browser Cookies, DNS Resolution, and IP Network Design](./Tutorial5.md)
 * [M6: Wireless Networks](./Tutorial6.md)
 * [M7: Azure Cloud Computing and Packet Analysis](./Tutorial7.md)
-* [M8: Tutorial 8]([Attacks and Vulnerabilities](./Tutorial8.md)
+* [Attacks and Vulnerabilities](./Tutorial8.md)

@@ -1,8 +1,8 @@
-**Networking and Cyber Security — Tutorial 9: Cyber Security Management**  
+# IS355: Tutorial 9 - Cyber Security Management
 
 ---
 
-[Course Journal](Main.md) | [Tutorial 8](Tutorial8.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 8](Tutorial8.md) | [Tutorial 10](Tutorial10.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Task 1 — Select Security Objectives
 

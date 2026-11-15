@@ -11,7 +11,8 @@
 ---
 
 ## Task 1: View Routing Table
-![Get-NetRoute -InterfaceIndex](IM/GetNetRoute.png)
+![Get-NetRoute -InterfaceIndex 7](IM/Get-NetRoute%20-InterfaceIndex%207.png)
+
 | DestinationPrefix | NextHop | RouteMetric | Detailed Description |
 | :--- | :--- | :--- | :--- |
 | **`0.0.0.0/0`** | `172.16.144.1` | `0` | **Default Gateway Route:** Matches any IP destination outside the local network. All outbound Internet/external traffic is forwarded to the default gateway address `172.16.144.1`. |

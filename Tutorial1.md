@@ -1,4 +1,6 @@
-# Tutorial 1: System Information with Get-ComputerInfo
+# IS355: Tutorial 1 - System Information with Get-ComputerInfo
+---
+[Course Journal](Main.md) | [Tutorial 2](Tutorial2.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 This tutorial uses the PowerShell `Get-ComputerInfo` cmdlet to pull processor and memory details for the local machine, filtering the output with the `-Property` parameter.
 

@@ -15,3 +15,7 @@
 * [M6: Wireless Networks](./Tutorial6.md)
 * [M7: Azure Cloud Computing and Packet Analysis](./Tutorial7.md)
 * [M8: Attacks and Vulnerabilities](./Tutorial8.md)
+* [M9: Cyber Security Management](./Tutorial9.md)
+* [M10: Cyber Security Controls](./Tutorial10.md)
+* [M11: Managing IT Services](./Tutorial11.md)
+* [M12: NICE Self-Assessment, Cyber Security Tool Kit, and Journal Wrap-Up](./Tutorial12.md)

@@ -27,7 +27,7 @@ The course self-assessment spreadsheet lists 116 KSAs (82 Knowledge and 34 Skill
 
 I rated every KSA as **0 (None)**, **1 (Some)**, or **2 (Good)**, based on this course, my other Information Systems courses (including Systems Analysis and Design), and my work experience with databases and process automation.
 
-- [My completed self-assessment spreadsheet](W12_nist-nice-self-assessment.xlsx)
+- [My completed self-assessment spreadsheet](IM/W12_nist-nice-self-assessment-Colin-Muller.xlsx)
 
 ### My Results
 

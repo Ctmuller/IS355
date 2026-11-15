@@ -11,7 +11,6 @@
 ---
 
 ## Task 1: View Routing Table
-![Get-NetRoute -Interfaceindex](IM/GetNetRoute.png)
 
 | DestinationPrefix | NextHop | RouteMetric | Detailed Description |
 | :--- | :--- | :--- | :--- |

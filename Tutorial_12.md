@@ -1,4 +1,4 @@
-**Networking and Cyber Security — Tutorial 12: NICE Self-Assessment, Cyber Security Tool Kit, and Journal Wrap-Up**  
+# IS355: Tutorial 12 - NICE Self-Assessment, Cyber Security Tool Kit, and Journal Wrap-Up
 
 ---
 

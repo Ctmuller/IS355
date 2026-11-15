@@ -1,4 +1,4 @@
-**Networking and Cyber Security — Tutorial 10: Cyber Security Controls**  
+# IS355: Tutorial 10 - Cyber Security Controls
 
 ---
 

@@ -1,4 +1,4 @@
-**Networking and Cyber Security — Tutorial 11: Managing IT Services**  
+# IS355: Tutorial 11 - Managing IT Services
 
 ---
 

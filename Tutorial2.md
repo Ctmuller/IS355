@@ -1,4 +1,6 @@
 # IS355: Tutorial 2 - Network Performance, Tools, and IP Addressing
+---
+[Course Journal](Main.md) | [Tutorial 1](Tutorial1.md) | [Tutorial 3](Tutorial3.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 - [Task 1: Speed Test](#task-1-speed-test)
@@ -32,7 +34,16 @@ To explore global internet routing, subsea cabling, and backbone transit topolog
 *   **APNIC Resource Explorer:** A regional registry tool used to inspect IP address blocks, routing registries, and ASN details.
 *   **AARNet International Network:** Maps high-capacity international and terrestrial links supporting education and research networks.
 *   **Hurricane Electric Network Map:** A 3D interactive visualization illustrating global backbone transit infrastructure, Points of Presence            (PoPs), and data centers.
-  ### Key Insights & Takeaways
+
+### Network Map Screenshots
+
+![Submarine Cable Map](IM/SUBCable.png)
+
+![AARNet International Network](IM/AARNetInternationalNetwork.png)
+
+![Hurricane Electric Network Map](IM/HurricaneElectric.png)
+
+### Key Insights & Takeaways
 - **Subsea Dependency:** Transoceanic fiber cables handle over 95% of international data traffic, making physical subsea landing stations critical single-point-of-failure infrastructure.
 - **BGP & Anycast Routing:** Global networks like Hurricane Electric use Autonomous System Numbers (ASNs) and Anycast DNS to route traffic along the shortest path, optimizing latency for end users.
 

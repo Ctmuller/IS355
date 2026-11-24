@@ -2,7 +2,7 @@
 
 ---
 
-[Course Journal](Main.md) | [Tutorial 8](Tutorial8.md) | [Tutorial 10](Tutorial10.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 8](Tutorial8.md) | [Tutorial 10](Tutorial_10.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Task 1 — Select Security Objectives
 

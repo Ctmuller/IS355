@@ -1,7 +1,7 @@
 # IS355: Tutorial 5 - Browser Cookies, DNS Resolution, and IP Network Design
 ---
 
-[Course Journal](Main.md) | [Tutorial 4](Tutorial4.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 4](Tutorial4.md) | [Tutorial 6](Tutorial6.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 

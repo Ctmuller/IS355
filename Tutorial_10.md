@@ -2,7 +2,7 @@
 
 ---
 
-[Course Journal](Main.md) | [Tutorial 9](Tutorial9.md) | [Tutorial 11](Tutorial11.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 9](Tutorial9.md) | [Tutorial 11](Tutorial_11.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 

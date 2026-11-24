@@ -1,6 +1,6 @@
 # IS355: Tutorial 3 - ARP, Network Topology, and Learning Reflection
 ---
-[Course Journal](Main.md) | [Tutorial 2](Tutorial2.md) | [Tutorial 3](Tutorial3.md)| [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 2](Tutorial2.md) | [Tutorial 4](Tutorial4.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 - [Task 1: View ARP Table](#task-1-view-arp-table)

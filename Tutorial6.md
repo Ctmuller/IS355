@@ -2,7 +2,7 @@
 # IS355: Tutorial 6 - Wireless Networks
 ---
 
-[Course Journal](Main.md) | [Tutorial 5](Tutorial5.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
+[Course Journal](Main.md) | [Tutorial 5](Tutorial5.md) |  [Tutorial 7](Tutorial7.md) | [Group Project Repository](https://github.com/Ctmuller/IS355_GroupProject)
 
 ## Table of Contents
 

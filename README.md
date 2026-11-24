@@ -23,7 +23,7 @@ The journal homepage is [Main.md](Main.md). The group project is in a separate r
 | 7 | [Azure Cloud Computing and Packet Analysis](Tutorial7.md) | Azure services, ARP and ICMP packet analysis, TCP handshake, inter-LAN forwarding |
 | 8 | [Attacks and Vulnerabilities](Tutorial8.md) | CIA triad, threat sources, CVE research, vulnerability disclosure, OWASP Top 10 |
 | 9 | [Cyber Security Management](Tutorial9.md) | NIST CSF 2.0 objectives, asset inventory, risk analysis |
-| 10 | [Cyber Security Controls](Tutorial10.md) | ACSC Essential Eight, NIST SP 800-53 controls |
+| 10 | [Cyber Security Controls](Tutorial_10.md) | ACSC Essential Eight, NIST SP 800-53 controls |
 | 11 | [Managing IT Services](Tutorial11.md) | Project report self-review, tutor feedback, action plan |
 | 12 | [NICE Self-Assessment, Tool Kit, and Wrap-Up](Tutorial12.md) | NIST NICE self-assessment, cyber security tool kit, course reflection |
 
